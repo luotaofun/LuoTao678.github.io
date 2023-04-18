@@ -114,7 +114,35 @@
 <li>JS、HTML、CSS</li>
 <li>Vue框架能虚拟化DOM元素</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 渲染数据 --&gt;</span><br><span class="line">			</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 渲染数据 --&gt;
+			
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="Vue3安装"><a href="#Vue3安装" class="headerlink" title="Vue3安装"></a>Vue3安装</h1><h2 id="1-开发平台"><a href="#1-开发平台" class="headerlink" title="1 开发平台"></a>1 开发平台</h2><ol>
 <li><p>HBuidlerX：基于Vue框架的uniapp框架。</p>
@@ -126,86 +154,1290 @@
 <li>第一种：CDN引入</li>
 <li>第二种：本地引入。</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;Vue3安装&lt;/title&gt;</span><br><span class="line">		&lt;!-- 1.CDN:通过在线引入vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;!-- 2.下载：通过本地引入Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;./js/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;Vue3安装&lt;&#x2F;title&gt;
+		&lt;!-- 1.CDN:通过在线引入vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+		&lt;!-- 2.下载：通过本地引入Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="Vue3的语法"><a href="#Vue3的语法" class="headerlink" title="Vue3的语法"></a>Vue3的语法</h1><h2 id="1-Vue3开发步骤及语法解析"><a href="#1-Vue3开发步骤及语法解析" class="headerlink" title="1 Vue3开发步骤及语法解析"></a>1 Vue3开发步骤及语法解析</h2><p><strong>Vue3入门案例</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line">Vue3开发步骤：</span><br><span class="line">	1. 创建一个Vue的实例对象：</span><br><span class="line">	</span><br><span class="line">	2. Vue作用在页面的指定位置(表示可以渲染页面的哪个位置);</span><br><span class="line">	</span><br><span class="line">	3. 数据的渲染：如何实现数据渲染到页面的指定位置处（Vue语法）</span><br><span class="line"> --&gt;</span><br><span class="line"> &lt;!-- </span><br><span class="line">Vue语法解析：</span><br><span class="line">	1. &#123;&#123;变量名&#125;&#125;: 插值表达式，能够读取在Vue中定义的初始化变量的取值。</span><br><span class="line">	2. mount(&quot;选择器&quot;): 根据选择器来选择一个元素，是Vue的挂载点，可以在该元素中使用Vue（比如访问Vue中的数据）。</span><br><span class="line">	   * id选择器：mount(&quot;#id属性的值&quot;)，首选</span><br><span class="line">	   * 类选择器：mount(&quot;.class属性的值&quot;)</span><br><span class="line">  --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;入门案例&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;hello-vue&quot;&gt;</span><br><span class="line">			&lt;!-- 3.渲染数据: 通过&#123;&#123;变量名&#125;&#125;访问vue中的数据 --&gt;</span><br><span class="line">			&#123;&#123; message &#125;&#125;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			// 1.初始化数据： 告知Vue对象渲染的数据是什么</span><br><span class="line">			const helloVueApp = &#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					// 声明一个data函数：表示Vue初始化数据的声明</span><br><span class="line">					return&#123;</span><br><span class="line">						// 声明数据</span><br><span class="line">						// 将初始化的数据返回给调用者</span><br><span class="line">						// 定义初始化的数据。变量名：变量值</span><br><span class="line">						// username: &quot;luotao&quot;,</span><br><span class="line">						// password: &quot;888&quot;,</span><br><span class="line">						// age: 22,</span><br><span class="line">						message: &quot;hello vue&quot;,</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			// 2.创建一个Vue实例对象,加载初始化数据,并将Vue对象作用到页面的指定位置处（挂载）</span><br><span class="line">			Vue.createApp(helloVueApp).mount(&quot;#hello-vue&quot;); //选择器：选择挂载的位置，选中某一个元素。挂载到页面的指定元素上，就可以在元素内部访问vue中的数据</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 
+Vue3开发步骤：
+	1. 创建一个Vue的实例对象：
+	
+	2. Vue作用在页面的指定位置(表示可以渲染页面的哪个位置);
+	
+	3. 数据的渲染：如何实现数据渲染到页面的指定位置处（Vue语法）
+ --&gt;
+ &lt;!-- 
+Vue语法解析：
+	1. &#123;&#123;变量名&#125;&#125;: 插值表达式，能够读取在Vue中定义的初始化变量的取值。
+	2. mount(&quot;选择器&quot;): 根据选择器来选择一个元素，是Vue的挂载点，可以在该元素中使用Vue（比如访问Vue中的数据）。
+	   * id选择器：mount(&quot;#id属性的值&quot;)，首选
+	   * 类选择器：mount(&quot;.class属性的值&quot;)
+  --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;入门案例&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;hello-vue&quot;&gt;
+			&lt;!-- 3.渲染数据: 通过&#123;&#123;变量名&#125;&#125;访问vue中的数据 --&gt;
+			&#123;&#123; message &#125;&#125;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F; 1.初始化数据： 告知Vue对象渲染的数据是什么
+			const helloVueApp &#x3D; &#123;
+				data()&#123;
+					&#x2F;&#x2F; 声明一个data函数：表示Vue初始化数据的声明
+					return&#123;
+						&#x2F;&#x2F; 声明数据
+						&#x2F;&#x2F; 将初始化的数据返回给调用者
+						&#x2F;&#x2F; 定义初始化的数据。变量名：变量值
+						&#x2F;&#x2F; username: &quot;luotao&quot;,
+						&#x2F;&#x2F; password: &quot;888&quot;,
+						&#x2F;&#x2F; age: 22,
+						message: &quot;hello vue&quot;,
+					&#125;
+				&#125;
+			&#125;
+			
+			&#x2F;&#x2F; 2.创建一个Vue实例对象,加载初始化数据,并将Vue对象作用到页面的指定位置处（挂载）
+			Vue.createApp(helloVueApp).mount(&quot;#hello-vue&quot;); &#x2F;&#x2F;选择器：选择挂载的位置，选中某一个元素。挂载到页面的指定元素上，就可以在元素内部访问vue中的数据
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413100452819.png" alt="image-20230413100452819"></p>
 <h2 id="2-data函数"><a href="#2-data函数" class="headerlink" title="2 data函数"></a>2 data函数</h2><p><strong>02-data函数</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line">	data用来定义vue的初始化数据。底层返回一个$data属性，来存储data函数的内容。访问Vue实例中定义的任意变量，一般简写($data)。</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;data函数&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 访问vue中的数据 --&gt;</span><br><span class="line">			&#123;&#123; count &#125;&#125;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = Vue.createApp(&#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					// data函数在vue创建组件的时候被自动调用</span><br><span class="line">					return&#123;</span><br><span class="line">						count: 4 </span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">			</span><br><span class="line">			// 返回vue的挂载实例对象</span><br><span class="line">			const vm = app.mount(&quot;#app&quot;) //挂载</span><br><span class="line">			</span><br><span class="line">			// 通过$data访问data()函数中的数据,也可以直接访问</span><br><span class="line">			// document表示页面对象</span><br><span class="line">			// write函数表示向document中追加数据</span><br><span class="line">			document.write(vm.$data.count) //4</span><br><span class="line">			document.write(&quot;&lt;br/&gt;&quot;) // 换行</span><br><span class="line">			document.write((vm.count)) //4</span><br><span class="line">			vm.count = 5</span><br><span class="line">			document.write(&quot;&lt;br/&gt;&quot;) // 换行</span><br><span class="line">			document.write(vm.$data.count) //5</span><br><span class="line">			document.write(&quot;&lt;br/&gt;&quot;) // 换行</span><br><span class="line">			document.write((vm.count)) //5</span><br><span class="line">			</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 
+	data用来定义vue的初始化数据。底层返回一个$data属性，来存储data函数的内容。访问Vue实例中定义的任意变量，一般简写($data)。
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;data函数&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 访问vue中的数据 --&gt;
+			&#123;&#123; count &#125;&#125;
+		&lt;&#x2F;div&gt;
+		&lt;script&gt;
+			const app &#x3D; Vue.createApp(&#123;
+				data()&#123;
+					&#x2F;&#x2F; data函数在vue创建组件的时候被自动调用
+					return&#123;
+						count: 4 
+					&#125;
+				&#125;
+			&#125;)
+			
+			&#x2F;&#x2F; 返回vue的挂载实例对象
+			const vm &#x3D; app.mount(&quot;#app&quot;) &#x2F;&#x2F;挂载
+			
+			&#x2F;&#x2F; 通过$data访问data()函数中的数据,也可以直接访问
+			&#x2F;&#x2F; document表示页面对象
+			&#x2F;&#x2F; write函数表示向document中追加数据
+			document.write(vm.$data.count) &#x2F;&#x2F;4
+			document.write(&quot;&lt;br&#x2F;&gt;&quot;) &#x2F;&#x2F; 换行
+			document.write((vm.count)) &#x2F;&#x2F;4
+			vm.count &#x3D; 5
+			document.write(&quot;&lt;br&#x2F;&gt;&quot;) &#x2F;&#x2F; 换行
+			document.write(vm.$data.count) &#x2F;&#x2F;5
+			document.write(&quot;&lt;br&#x2F;&gt;&quot;) &#x2F;&#x2F; 换行
+			document.write((vm.count)) &#x2F;&#x2F;5
+			
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413100536169.png" alt="image-20230413100536169"></p>
-<h2 id="3-自定义函数"><a href="#3-自定义函数" class="headerlink" title="3 自定义函数"></a>3 自定义函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line">自定义函数：</span><br><span class="line">	根据业务来编写逻辑，把逻辑封装到自定义的结构中，这个结构就称之为方法或函数。</span><br><span class="line">	methods: 表示声明自定义函数结构，在这个结构中定义多个方法。</span><br><span class="line">	&#123;</span><br><span class="line">	    data()&#123;</span><br><span class="line">	        return&#123;</span><br><span class="line">	            // 返回给调用者初始化数据</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;,</span><br><span class="line">	    methods:&#123;</span><br><span class="line">	        // 自定义函数</span><br><span class="line">	        方法1(参数列表)&#123;</span><br><span class="line">	            //方法体</span><br><span class="line">	        &#125;,</span><br><span class="line">	        方法2(参数列表)&#123;</span><br><span class="line">	            //方法体</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;;</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;方法&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			// 创建Vue实例对象并初始化数据</span><br><span class="line">			const app = Vue.createApp(&#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						// 返回给调用者初始化数据</span><br><span class="line">						count: 1</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				methods:&#123;</span><br><span class="line">					// 自定义函数</span><br><span class="line">					increment()&#123;</span><br><span class="line">						// this表示vue的当前实例对象,要访问data的局部变量必须通过this</span><br><span class="line">						this.count++;</span><br><span class="line">					&#125;,</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">			// 借用Vue的实例对象访问Vue中的结构 </span><br><span class="line">			const vm = app.mount(&quot;#app&quot;);</span><br><span class="line">			// 访问变量</span><br><span class="line">			document.write(vm.count) // 1</span><br><span class="line">			// 访问方法</span><br><span class="line">			vm.increment(); // count++</span><br><span class="line">			document.write(vm.count) // 2</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="3-自定义函数"><a href="#3-自定义函数" class="headerlink" title="3 自定义函数"></a>3 自定义函数</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 
+自定义函数：
+	根据业务来编写逻辑，把逻辑封装到自定义的结构中，这个结构就称之为方法或函数。
+	methods: 表示声明自定义函数结构，在这个结构中定义多个方法。
+	&#123;
+	    data()&#123;
+	        return&#123;
+	            &#x2F;&#x2F; 返回给调用者初始化数据
+	        &#125;
+	    &#125;,
+	    methods:&#123;
+	        &#x2F;&#x2F; 自定义函数
+	        方法1(参数列表)&#123;
+	            &#x2F;&#x2F;方法体
+	        &#125;,
+	        方法2(参数列表)&#123;
+	            &#x2F;&#x2F;方法体
+	        &#125;
+	    &#125;
+	&#125;;
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;方法&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F; 创建Vue实例对象并初始化数据
+			const app &#x3D; Vue.createApp(&#123;
+				data()&#123;
+					return&#123;
+						&#x2F;&#x2F; 返回给调用者初始化数据
+						count: 1
+					&#125;
+				&#125;,
+				methods:&#123;
+					&#x2F;&#x2F; 自定义函数
+					increment()&#123;
+						&#x2F;&#x2F; this表示vue的当前实例对象,要访问data的局部变量必须通过this
+						this.count++;
+					&#125;,
+				&#125;
+			&#125;);
+			&#x2F;&#x2F; 借用Vue的实例对象访问Vue中的结构 
+			const vm &#x3D; app.mount(&quot;#app&quot;);
+			&#x2F;&#x2F; 访问变量
+			document.write(vm.count) &#x2F;&#x2F; 1
+			&#x2F;&#x2F; 访问方法
+			vm.increment(); &#x2F;&#x2F; count++
+			document.write(vm.count) &#x2F;&#x2F; 2
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="Vue3模板语法"><a href="#Vue3模板语法" class="headerlink" title="Vue3模板语法"></a>Vue3模板语法</h1><p>允许开发者使用DOM绑定的形式做Vue数据的展示(渲染)</p>
-<h2 id="1-插值、v-html指令"><a href="#1-插值、v-html指令" class="headerlink" title="1 插值、v-html指令"></a>1 插值、v-html指令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- v-html指令</span><br><span class="line">	文本插值与HTML插值</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;html指令&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 文本插值：将值作为字符串输出 </span><br><span class="line">				在Vue实例对象中定义属性,然后再挂载在区域内通过&#123;&#123;变量名&#125;&#125;</span><br><span class="line">			--&gt;</span><br><span class="line">			&lt;p&gt;&#123;&#123;rawHtml&#125;&#125;&lt;/p&gt; </span><br><span class="line">			&lt;!-- HTML插值: 使用v-html指令(Vue提供的)</span><br><span class="line">				将指定的html片断插入到被标记的元素内,以子标签的形式出现; v-html的取值是html片断的变量名称。</span><br><span class="line">			 --&gt;</span><br><span class="line">			&lt;p&gt;</span><br><span class="line">				&lt;span v-html=&quot;rawHtml&quot;&gt;&lt;/span&gt;</span><br><span class="line">			&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = Vue.createApp(&#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						rawHtml: &#x27;&lt;span style=&quot;color:red;&quot;&gt;这是要插入的html片断代码&lt;/span&gt;&#x27;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">			app.mount(&quot;#app&quot;)</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="1-插值、v-html指令"><a href="#1-插值、v-html指令" class="headerlink" title="1 插值、v-html指令"></a>1 插值、v-html指令</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- v-html指令
+	文本插值与HTML插值
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;html指令&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 文本插值：将值作为字符串输出 
+				在Vue实例对象中定义属性,然后再挂载在区域内通过&#123;&#123;变量名&#125;&#125;
+			--&gt;
+			&lt;p&gt;&#123;&#123;rawHtml&#125;&#125;&lt;&#x2F;p&gt; 
+			&lt;!-- HTML插值: 使用v-html指令(Vue提供的)
+				将指定的html片断插入到被标记的元素内,以子标签的形式出现; v-html的取值是html片断的变量名称。
+			 --&gt;
+			&lt;p&gt;
+				&lt;span v-html&#x3D;&quot;rawHtml&quot;&gt;&lt;&#x2F;span&gt;
+			&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		&lt;script&gt;
+			const app &#x3D; Vue.createApp(&#123;
+				data()&#123;
+					return&#123;
+						rawHtml: &#39;&lt;span style&#x3D;&quot;color:red;&quot;&gt;这是要插入的html片断代码&lt;&#x2F;span&gt;&#39;
+					&#125;
+				&#125;
+			&#125;);
+			app.mount(&quot;#app&quot;)
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230412143356159.png" alt="image-20230412143356159"></p>
-<h2 id="2-表达式"><a href="#2-表达式" class="headerlink" title="2 表达式"></a>2 表达式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--表达式: </span><br><span class="line">	在Vue中插值支持四则运算; 将运算的结果插入到指定的位置 </span><br><span class="line">	</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;表达式&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id= &quot;app&quot;&gt;</span><br><span class="line">			1.四则运算: &#123;&#123;5+5&#125;&#125; &lt;br/&gt;</span><br><span class="line">			2.三目运算符:  &#123;&#123; ok ? &quot;yes&quot; : &quot;no&quot; &#125;&#125; &lt;br/&gt;</span><br><span class="line">			&lt;!-- 将字符串拆分反转然后重新连接 --&gt;</span><br><span class="line">			3.支持函数: &#123;&#123; message.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;)&#125;&#125; &lt;br/&gt;</span><br><span class="line">			4.属性: v-bind 表示将目标属性设置为动态取值,表示将属性的值绑定到指定的一个变量中</span><br><span class="line">			&lt;div v-bind:id=&quot;&#x27;list-&#x27; + id&quot;&gt;&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app=&#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						ok: true,</span><br><span class="line">						message: &quot;罗涛学习Vue3&quot;,</span><br><span class="line">						id: 1</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;);</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-表达式"><a href="#2-表达式" class="headerlink" title="2 表达式"></a>2 表达式</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--表达式: 
+	在Vue中插值支持四则运算; 将运算的结果插入到指定的位置 
+	
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;表达式&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D; &quot;app&quot;&gt;
+			1.四则运算: &#123;&#123;5+5&#125;&#125; &lt;br&#x2F;&gt;
+			2.三目运算符:  &#123;&#123; ok ? &quot;yes&quot; : &quot;no&quot; &#125;&#125; &lt;br&#x2F;&gt;
+			&lt;!-- 将字符串拆分反转然后重新连接 --&gt;
+			3.支持函数: &#123;&#123; message.split(&#39;&#39;).reverse().join(&#39;&#39;)&#125;&#125; &lt;br&#x2F;&gt;
+			4.属性: v-bind 表示将目标属性设置为动态取值,表示将属性的值绑定到指定的一个变量中
+			&lt;div v-bind:id&#x3D;&quot;&#39;list-&#39; + id&quot;&gt;&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+		&lt;script&gt;
+			const app&#x3D;&#123;
+				data()&#123;
+					return&#123;
+						ok: true,
+						message: &quot;罗涛学习Vue3&quot;,
+						id: 1
+					&#125;
+				&#125;
+			&#125;;
+			Vue.createApp(app).mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230412155425266.png" alt="image-20230412155425266"></p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413100853394.png" alt="image-20230413100853394"></p>
-<h2 id="3-Vue3指令"><a href="#3-Vue3指令" class="headerlink" title="3 Vue3指令"></a>3 Vue3指令</h2><h3 id="3-1-条件指令-v-if、v-else、v-else-if、v-show"><a href="#3-1-条件指令-v-if、v-else、v-else-if、v-show" class="headerlink" title="3.1 条件指令 v-if、v-else、v-else-if、v-show"></a>3.1 条件指令 v-if、v-else、v-else-if、v-show</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--Vue3指令： 控制Vue的语法值的访问，应用到Dom上。</span><br><span class="line">	v-if指令: </span><br><span class="line">		&lt;span v-if=&quot;条件&quot;&gt;内容&lt;/span&gt;</span><br><span class="line">		若条件为真，则渲染到DOM上</span><br><span class="line">		若条件为假，则在DOM是不进行渲染(而非隐藏)</span><br><span class="line"> --&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;!-- v-else指令</span><br><span class="line"> 	和v-if成对出现,当v-if指令的条件不成立,v-else被执行。</span><br><span class="line"> 	&lt;span v-else&gt;内容&lt;/span&gt;</span><br><span class="line">  --&gt;</span><br><span class="line">  </span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;常用指令&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- seen=true时渲染到Dom上，false则不渲染 --&gt;</span><br><span class="line">			&lt;p v-if=&quot;seen&quot;&gt;可以看见!&lt;/p&gt;</span><br><span class="line">			&lt;p v-else&gt;不可以看见!&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						seen: true</span><br><span class="line">						//seen: false</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;);</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Vue3指令"><a href="#Vue3指令" class="headerlink" title="Vue3指令"></a>Vue3指令</h1><h2 id="1-条件指令-v-if、v-else、v-else-if、v-show"><a href="#1-条件指令-v-if、v-else、v-else-if、v-show" class="headerlink" title="1 条件指令 v-if、v-else、v-else-if、v-show"></a>1 条件指令 v-if、v-else、v-else-if、v-show</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--Vue3指令： 控制Vue的语法值的访问，应用到Dom上。
+	v-if指令: 
+		&lt;span v-if&#x3D;&quot;条件&quot;&gt;内容&lt;&#x2F;span&gt;
+		若条件为真，则渲染到DOM上
+		若条件为假，则在DOM是不进行渲染(而非隐藏)
+ --&gt;
+ 
+ &lt;!-- v-else指令
+ 	和v-if成对出现,当v-if指令的条件不成立,v-else被执行。
+ 	&lt;span v-else&gt;内容&lt;&#x2F;span&gt;
+  --&gt;
+  
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;常用指令&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- seen&#x3D;true时渲染到Dom上，false则不渲染 --&gt;
+			&lt;p v-if&#x3D;&quot;seen&quot;&gt;可以看见!&lt;&#x2F;p&gt;
+			&lt;p v-else&gt;不可以看见!&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		&lt;script&gt;
+			const app &#x3D; &#123;
+				data()&#123;
+					return&#123;
+						seen: true
+						&#x2F;&#x2F;seen: false
+					&#125;
+				&#125;
+			&#125;;
+			Vue.createApp(app).mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413100942875.png" alt="image-20230413100942875"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line">	条件指令 v-if 、v-else if、v-else</span><br><span class="line">	如果条件不成立，则对应的标签不会被渲染到DOM上。</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 渲染数据 --&gt;</span><br><span class="line">			&lt;p v-if=&quot;type==&#x27;A&#x27;&quot;&gt;A.优秀&lt;/p&gt;</span><br><span class="line">			&lt;p v-else-if= &quot;type==&#x27;B&#x27;&quot;&gt;B.良好&lt;/p&gt;</span><br><span class="line">			&lt;p v-else-if= &quot;type==&#x27;C&#x27;&quot;&gt;C.及格&lt;/p&gt;</span><br><span class="line">			&lt;p v-else &gt;D.不及格&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						type: &quot;B&quot;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 
+	条件指令 v-if 、v-else if、v-else
+	如果条件不成立，则对应的标签不会被渲染到DOM上。
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 渲染数据 --&gt;
+			&lt;p v-if&#x3D;&quot;type&#x3D;&#x3D;&#39;A&#39;&quot;&gt;A.优秀&lt;&#x2F;p&gt;
+			&lt;p v-else-if&#x3D; &quot;type&#x3D;&#x3D;&#39;B&#39;&quot;&gt;B.良好&lt;&#x2F;p&gt;
+			&lt;p v-else-if&#x3D; &quot;type&#x3D;&#x3D;&#39;C&#39;&quot;&gt;C.及格&lt;&#x2F;p&gt;
+			&lt;p v-else &gt;D.不及格&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						type: &quot;B&quot;
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413111338989.png" alt="image-20230413111338989"></p>
-<h3 id="3-2-v-if与v-show的区别"><a href="#3-2-v-if与v-show的区别" class="headerlink" title="3.2 v-if与v-show的区别"></a>3.2 v-if与v-show的区别</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--v-if与v-show的区别 </span><br><span class="line">	v-if:	若条件不成立，则修饰的元素不会被加载到DOM。</span><br><span class="line">	v-show:	若条件不成立，则修饰的元素会加载到DOM，并且将此元素的display设为none，即不可见。</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;v-if与v-show的区别&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 渲染数据 --&gt;</span><br><span class="line">			&lt;p v-if=&quot;flag&quot;&gt;v-if指令渲染此元素&lt;/p&gt;</span><br><span class="line">			&lt;p v-show=&quot;flag&quot;&gt;v-show指令渲染此元素&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						flag: false</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-v-if与v-show的区别"><a href="#2-v-if与v-show的区别" class="headerlink" title="2 v-if与v-show的区别"></a>2 v-if与v-show的区别</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--v-if与v-show的区别 
+	v-if:	若条件不成立，则修饰的元素不会被加载到DOM。
+	v-show:	若条件不成立，则修饰的元素会加载到DOM，并且将此元素的display设为none，即不可见。
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;v-if与v-show的区别&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 渲染数据 --&gt;
+			&lt;p v-if&#x3D;&quot;flag&quot;&gt;v-if指令渲染此元素&lt;&#x2F;p&gt;
+			&lt;p v-show&#x3D;&quot;flag&quot;&gt;v-show指令渲染此元素&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						flag: false
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413113601616.png" alt="image-20230413113601616"></p>
-<h3 id="3-3-v-for指令"><a href="#3-3-v-for指令" class="headerlink" title="3.3  v-for指令"></a>3.3  v-for指令</h3><blockquote>
+<h2 id="3-v-for指令"><a href="#3-v-for指令" class="headerlink" title="3  v-for指令"></a>3  v-for指令</h2><blockquote>
 <p>类似Java中的For Each 循环</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- v-for指令</span><br><span class="line">	遍历数组</span><br><span class="line">	&#123;</span><br><span class="line">		&lt;li v-for=&quot;(元素变量,索引) in 被循环的数组&quot;&gt;&lt;/li&gt;</span><br><span class="line">		sites: &#123;...&#125;</span><br><span class="line">	&#125;</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--高级用法：&lt;template&gt;标签</span><br><span class="line">	将页面某一个子标签作为一个整体统一处理。</span><br><span class="line"> --&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;!--遍历对象 </span><br><span class="line">	&#123;</span><br><span class="line">		&lt;li v-for=&quot;(元素变量,key,索引) in 被循环的对象&quot;&gt;&lt;/li&gt;</span><br><span class="line">		obj: &#123; // 对象</span><br><span class="line">		// key:value</span><br><span class="line">			name: &quot;百度&quot;,</span><br><span class="line">			url: &quot;http://www.baidu.com&quot;,</span><br><span class="line">			slogan: &quot;百度一下，你就知道&quot; // 标语 </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;v-for索引、遍历对象&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 渲染数据 --&gt;</span><br><span class="line">			&lt;h2&gt;网站:&lt;/h2&gt;</span><br><span class="line">			&lt;ol&gt;</span><br><span class="line">				&lt;!-- 赋值规则：值给site，索引给index</span><br><span class="line">				&lt;li v-for=&quot;(site,index) in sites&quot;&gt;</span><br><span class="line">					&#123;&#123; index &#125;&#125; --- &#123;&#123; site.text &#125;&#125;</span><br><span class="line">				&lt;/li&gt; --&gt;</span><br><span class="line">				&lt;template v-for=&quot;(site,index) in sites&quot;&gt;</span><br><span class="line">					&lt;li&gt;&#123;&#123; index &#125;&#125; --- &#123;&#123; site.text &#125;&#125;&lt;/li&gt;</span><br><span class="line">					&lt;li&gt;=============================&lt;/li&gt;</span><br><span class="line">				&lt;/template&gt;</span><br><span class="line">			&lt;/ol&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;ul&gt;</span><br><span class="line">				&lt;li v-for=&quot;(val,key,index) in obj&quot;&gt;</span><br><span class="line">					索引：&#123;&#123; index &#125;&#125; ，属性：&#123;&#123; key &#125;&#125;，值：&#123;&#123; val &#125;&#125;</span><br><span class="line">				&lt;/li&gt;</span><br><span class="line">			&lt;/ul&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;ul&gt;</span><br><span class="line">				&lt;!-- 从1开始遍历 --&gt;</span><br><span class="line">				&lt;li v-for=&quot;n in 10&quot;&gt;&#123;&#123; n &#125;&#125;&lt;/li&gt;</span><br><span class="line">			&lt;/ul&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						sites: [ // 数组</span><br><span class="line">							&#123;text: &quot;百度&quot;&#125;, //对象</span><br><span class="line">							&#123;text: &quot;字节&quot;&#125;,</span><br><span class="line">							&#123;text: &quot;谷歌&quot;&#125;,</span><br><span class="line">							&#123;text: &quot;360&quot;&#125;,</span><br><span class="line">							&#123;text: &quot;腾讯&quot;&#125;</span><br><span class="line">						],</span><br><span class="line">						obj: &#123; // 对象</span><br><span class="line">							name: &quot;百度&quot;,</span><br><span class="line">							url: &quot;http://www.baidu.com&quot;,</span><br><span class="line">							slogan: &quot;百度一下，你就知道&quot; // 标语 </span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- v-for指令
+	遍历数组
+	&#123;
+		&lt;li v-for&#x3D;&quot;(元素变量,索引) in 被循环的数组&quot;&gt;&lt;&#x2F;li&gt;
+		sites: &#123;...&#125;
+	&#125;
+--&gt;
+
+&lt;!--高级用法：&lt;template&gt;标签
+	将页面某一个子标签作为一个整体统一处理。
+ --&gt;
+ 
+ &lt;!--遍历对象 
+	&#123;
+		&lt;li v-for&#x3D;&quot;(元素变量,key,索引) in 被循环的对象&quot;&gt;&lt;&#x2F;li&gt;
+		obj: &#123; &#x2F;&#x2F; 对象
+		&#x2F;&#x2F; key:value
+			name: &quot;百度&quot;,
+			url: &quot;http:&#x2F;&#x2F;www.baidu.com&quot;,
+			slogan: &quot;百度一下，你就知道&quot; &#x2F;&#x2F; 标语 
+		&#125;
+	&#125;
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;v-for索引、遍历对象&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 渲染数据 --&gt;
+			&lt;h2&gt;网站:&lt;&#x2F;h2&gt;
+			&lt;ol&gt;
+				&lt;!-- 赋值规则：值给site，索引给index
+				&lt;li v-for&#x3D;&quot;(site,index) in sites&quot;&gt;
+					&#123;&#123; index &#125;&#125; --- &#123;&#123; site.text &#125;&#125;
+				&lt;&#x2F;li&gt; --&gt;
+				&lt;template v-for&#x3D;&quot;(site,index) in sites&quot;&gt;
+					&lt;li&gt;&#123;&#123; index &#125;&#125; --- &#123;&#123; site.text &#125;&#125;&lt;&#x2F;li&gt;
+					&lt;li&gt;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&lt;&#x2F;li&gt;
+				&lt;&#x2F;template&gt;
+			&lt;&#x2F;ol&gt;
+			
+			&lt;ul&gt;
+				&lt;li v-for&#x3D;&quot;(val,key,index) in obj&quot;&gt;
+					索引：&#123;&#123; index &#125;&#125; ，属性：&#123;&#123; key &#125;&#125;，值：&#123;&#123; val &#125;&#125;
+				&lt;&#x2F;li&gt;
+			&lt;&#x2F;ul&gt;
+			
+			&lt;ul&gt;
+				&lt;!-- 从1开始遍历 --&gt;
+				&lt;li v-for&#x3D;&quot;n in 10&quot;&gt;&#123;&#123; n &#125;&#125;&lt;&#x2F;li&gt;
+			&lt;&#x2F;ul&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						sites: [ &#x2F;&#x2F; 数组
+							&#123;text: &quot;百度&quot;&#125;, &#x2F;&#x2F;对象
+							&#123;text: &quot;字节&quot;&#125;,
+							&#123;text: &quot;谷歌&quot;&#125;,
+							&#123;text: &quot;360&quot;&#125;,
+							&#123;text: &quot;腾讯&quot;&#125;
+						],
+						obj: &#123; &#x2F;&#x2F; 对象
+							name: &quot;百度&quot;,
+							url: &quot;http:&#x2F;&#x2F;www.baidu.com&quot;,
+							slogan: &quot;百度一下，你就知道&quot; &#x2F;&#x2F; 标语 
+						&#125;
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413141744200.png" alt="image-20230413141744200"></p>
-<h3 id="3-4-传参数、v-bind指令"><a href="#3-4-传参数、v-bind指令" class="headerlink" title="3.4 传参数、v-bind指令"></a>3.4 传参数、v-bind指令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 传参数</span><br><span class="line">	Vue中的标签指令可以传递动态数据作为参数声明。</span><br><span class="line">--&gt;</span><br><span class="line">&lt;!-- v-bind指令，可以简写为冒号</span><br><span class="line">	表示将一个属性的取值动态的和Vue中一个变量绑定，只要变量的值发生改变，对应的绑定元素就会更新。</span><br><span class="line">	v-bind:html的属性名 = &quot;Vue中的变量名&quot;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;title&gt;传参数&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;a v-bind:href=&quot;url&quot;&gt;点我:实现网页跳转&lt;/a&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app=&#123;</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						url: &quot;http://www.baidu.com&quot;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;);</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="4-传参数、v-bind指令"><a href="#4-传参数、v-bind指令" class="headerlink" title="4 传参数、v-bind指令"></a>4 传参数、v-bind指令</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 传参数
+	Vue中的标签指令可以传递动态数据作为参数声明。
+--&gt;
+&lt;!-- v-bind指令，可以简写为冒号
+	表示将一个属性的取值动态的和Vue中一个变量绑定，只要变量的值发生改变，对应的绑定元素就会更新。
+	v-bind:html的属性名 &#x3D; &quot;Vue中的变量名&quot;
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+		&lt;title&gt;传参数&lt;&#x2F;title&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;a v-bind:href&#x3D;&quot;url&quot;&gt;点我:实现网页跳转&lt;&#x2F;a&gt;
+		&lt;&#x2F;div&gt;
+		&lt;script&gt;
+			const app&#x3D;&#123;
+				data()&#123;
+					return&#123;
+						url: &quot;http:&#x2F;&#x2F;www.baidu.com&quot;
+					&#125;
+				&#125;
+			&#125;;
+			Vue.createApp(app).mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413103933592.png" alt="image-20230413103933592"></p>
-<h3 id="3-5-用户输入之双向数据绑定、v-model指令"><a href="#3-5-用户输入之双向数据绑定、v-model指令" class="headerlink" title="3.5 用户输入之双向数据绑定、v-model指令"></a>3.5 用户输入之双向数据绑定、v-model指令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--用户输入 </span><br><span class="line">	1.双向数据绑定</span><br><span class="line">		元素的数据和vue中对象的数据相互影响，取值相同，同步更新。</span><br><span class="line"> --&gt;</span><br><span class="line"> &lt;!-- v-model指令</span><br><span class="line">	用来实现Vue和DOM元素双向数据绑定。</span><br><span class="line">	&#123;</span><br><span class="line">		&lt;span v-model=&quot;Vue中定义的变量&quot;&gt;&lt;/span&gt;</span><br><span class="line">		</span><br><span class="line">		return&#123;</span><br><span class="line">			message: &quot;hello Vue&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">  --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;用户输入之双向数据绑定、v-model指令&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 渲染数据 --&gt;</span><br><span class="line">			&lt;p&gt;message值: &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line">			&lt;p&gt;</span><br><span class="line">				&lt;input v-model=&quot;message&quot; /&gt;</span><br><span class="line">			&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						message: &quot;hello Vue&quot;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="5-用户输入之双向数据绑定、v-model指令"><a href="#5-用户输入之双向数据绑定、v-model指令" class="headerlink" title="5 用户输入之双向数据绑定、v-model指令"></a>5 用户输入之双向数据绑定、v-model指令</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--用户输入 
+	1.双向数据绑定
+		元素的数据和vue中对象的数据相互影响，取值相同，同步更新。
+ --&gt;
+ &lt;!-- v-model指令
+	用来实现Vue和DOM元素双向数据绑定。
+	&#123;
+		&lt;span v-model&#x3D;&quot;Vue中定义的变量&quot;&gt;&lt;&#x2F;span&gt;
+		
+		return&#123;
+			message: &quot;hello Vue&quot;
+		&#125;
+	&#125;
+  --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;用户输入之双向数据绑定、v-model指令&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 渲染数据 --&gt;
+			&lt;p&gt;message值: &#123;&#123; message &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;p&gt;
+				&lt;input v-model&#x3D;&quot;message&quot; &#x2F;&gt;
+			&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						message: &quot;hello Vue&quot;
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413105039041.png" alt="image-20230413105039041"></p>
-<h1 id="Vue3组件"><a href="#Vue3组件" class="headerlink" title="Vue3组件"></a>Vue3组件</h1><h2 id="1-全局组件"><a href="#1-全局组件" class="headerlink" title="1 全局组件"></a>1 全局组件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--全局组件封装步骤： </span><br><span class="line">	1.创建Vue实例对象</span><br><span class="line">	2.通过app.component()注册全局组件。需要声明组件名称和组件的封装HTML片断(template属性)</span><br><span class="line">	3.将对象挂载到页面指定元素上</span><br><span class="line">	4.通过组件名标签的形式访问组件</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 4.通过组件名标签的形式访问组件 --&gt;</span><br><span class="line">			&lt;my-component&gt;&lt;/my-component&gt;</span><br><span class="line">			&lt;my-component&gt;&lt;/my-component&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			//1.创建实例对象</span><br><span class="line">			const app = Vue.createApp(&#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">			</span><br><span class="line">			// 2.通过component函数绑定自定义全局组件</span><br><span class="line">			/**</span><br><span class="line">			 * 参数1：表示封装的组件名（注册组件名）</span><br><span class="line">			 * 参数2：使用&#123;&#125;声明封装的这个组件的HTML结构（组件的实现）</span><br><span class="line">			 * template属性:表示指定被封装的HTML的结构</span><br><span class="line">			 */</span><br><span class="line">			app.component(</span><br><span class="line">				&quot;my-component&quot;,</span><br><span class="line">				&#123;</span><br><span class="line">					template: &#x27;&lt;div style=&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件封装:全局组件&lt;/h1&gt;&lt;/div&gt;&#x27;</span><br><span class="line">				&#125;</span><br><span class="line">			);</span><br><span class="line">			</span><br><span class="line">			//3.挂载</span><br><span class="line">			app.mount(&quot;#app&quot;);</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Vue自定义指令"><a href="#Vue自定义指令" class="headerlink" title="Vue自定义指令"></a>Vue自定义指令</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--Vue自定义指令
+	局部注册指令
+	注册指令：实例化Vue对象，通过directive()完成自定义指令的注册。
+		directive()方法参数，参数1表示指令名称(v-指令名称)，参数2表示用匿名函数封装该指令要实现的业务逻辑
+ --&gt;
+ &lt;!-- 全局注册指令
+	&#123;
+		directives: &#123;&#x2F;&#x2F; directives属性表示可以同时注册多个自定义指令
+			&#x2F;&#x2F; 指令名: &#123;
+				&#x2F;&#x2F;指令实现
+			&#125;
+		&#125;
+	&#125;
+  --&gt;
+ 
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;Vue自定义指令 &lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 调用指令 --&gt;
+			&lt;input type&#x3D;&quot;text&quot; v-focus&#x2F;&gt;
+			&lt;input type&#x3D;&quot;text&quot; v-foc&#x2F;&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			
+			const app &#x3D; Vue.createApp(&#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;,
+				&#x2F;&#x2F; 全局注册指令
+				directives: &#123;&#x2F;&#x2F; directives属性表示可以同时注册多个自定义指令
+					foc: &#123;
+						mounted(el)&#123;
+							el.focus();&#x2F;&#x2F; 获取焦点
+						&#125;
+					&#125;
+				&#125;
+			&#125;);
+			
+			&#x2F;&#x2F; 局部注册自定义指令：v-focus 获取输入光标
+			app.directive(&quot;focus&quot;,&#123;
+				&#x2F;&#x2F; el表示挂载点的element元素(这里是input元素),即目标元素
+				mounted(el)&#123; &#x2F;&#x2F; 一挂载就触发执行该函数
+					el.focus(); &#x2F;&#x2F; 表示获取当前元素的焦点
+					alert(&quot;input获取到了焦点&quot;)
+				&#125;
+			&#125;)
+			
+			&#x2F;&#x2F;挂载
+			app.mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230418121117880.png" alt="image-20230418121117880"></p>
+<h1 id="Vue3组件"><a href="#Vue3组件" class="headerlink" title="Vue3组件"></a>Vue3组件</h1><h2 id="1-全局组件"><a href="#1-全局组件" class="headerlink" title="1 全局组件"></a>1 全局组件</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--全局组件封装步骤： 
+	1.创建Vue实例对象
+	2.通过app.component()注册全局组件。需要声明组件名称和组件的封装HTML片断(template属性)
+	3.将对象挂载到页面指定元素上
+	4.通过组件名标签的形式访问组件
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 4.通过组件名标签的形式访问组件 --&gt;
+			&lt;my-component&gt;&lt;&#x2F;my-component&gt;
+			&lt;my-component&gt;&lt;&#x2F;my-component&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F;1.创建实例对象
+			const app &#x3D; Vue.createApp(&#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;
+			&#125;);
+			
+			&#x2F;&#x2F; 2.通过component函数绑定自定义全局组件
+			&#x2F;**
+			 * 参数1：表示封装的组件名（注册组件名）
+			 * 参数2：使用&#123;&#125;声明封装的这个组件的HTML结构（组件的实现）
+			 * template属性:表示指定被封装的HTML的结构
+			 *&#x2F;
+			app.component(
+				&quot;my-component&quot;,
+				&#123;
+					template: &#39;&lt;div style&#x3D;&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件封装:全局组件&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;&#39;
+				&#125;
+			);
+			
+			&#x2F;&#x2F;3.挂载
+			app.mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413151252789.png" alt="image-20230413151252789"></p>
-<h2 id="2-局部组件"><a href="#2-局部组件" class="headerlink" title="2 局部组件"></a>2 局部组件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--局部组件封装步骤： </span><br><span class="line">	1.声明一个外部的js变量，封装组件实现(声明在template属性上)</span><br><span class="line">	2.components属性中用键值对定义组件名和关联的js变量</span><br><span class="line">	3.创建Vue实例并挂载</span><br><span class="line">	4.以组件名标签的形式访问组件</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- 4.以组件名标签的形式访问组件 --&gt;</span><br><span class="line">			&lt;my-component&gt;&lt;/my-component&gt;</span><br><span class="line">			&lt;my-component2&gt;&lt;/my-component2&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			// 1.声明一个外部的js变量，封装组件实现(声明在template属性上)</span><br><span class="line">			// tmplate属性：组件实现</span><br><span class="line">			const html_code = &#123;</span><br><span class="line">				template: &#x27;&lt;div style=&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件:my-component&lt;/h1&gt;&lt;/div&gt;&#x27;</span><br><span class="line">			&#125;;</span><br><span class="line">			const html_code2 = &#123;</span><br><span class="line">				template: &#x27;&lt;div style=&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件2:my-component2&lt;/h1&gt;&lt;/div&gt;&#x27;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				components: &#123; // 2.components属性中用键值对定义组件名和关联的js变量</span><br><span class="line">					&quot;my-component&quot;: html_code,</span><br><span class="line">					&quot;my-component2&quot;: html_code2</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 3.创建Vue实例并挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-局部组件"><a href="#2-局部组件" class="headerlink" title="2 局部组件"></a>2 局部组件</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--局部组件封装步骤： 
+	1.声明一个外部的js变量，封装组件实现(声明在template属性上)
+	2.components属性中用键值对定义组件名和关联的js变量
+	3.创建Vue实例并挂载
+	4.以组件名标签的形式访问组件
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 4.以组件名标签的形式访问组件 --&gt;
+			&lt;my-component&gt;&lt;&#x2F;my-component&gt;
+			&lt;my-component2&gt;&lt;&#x2F;my-component2&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F; 1.声明一个外部的js变量，封装组件实现(声明在template属性上)
+			&#x2F;&#x2F; tmplate属性：组件实现
+			const html_code &#x3D; &#123;
+				template: &#39;&lt;div style&#x3D;&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件:my-component&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;&#39;
+			&#125;;
+			const html_code2 &#x3D; &#123;
+				template: &#39;&lt;div style&#x3D;&quot;color:red;&quot;&gt;&lt;h1&gt;自定义组件2:my-component2&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;&#39;
+			&#125;;
+			
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;,
+				components: &#123; &#x2F;&#x2F; 2.components属性中用键值对定义组件名和关联的js变量
+					&quot;my-component&quot;: html_code,
+					&quot;my-component2&quot;: html_code2
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 3.创建Vue实例并挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413154025386.png" alt="image-20230413154025386"></p>
-<h1 id="props属性、组件传值、动态绑定数据"><a href="#props属性、组件传值、动态绑定数据" class="headerlink" title="props属性、组件传值、动态绑定数据"></a>props属性、组件传值、动态绑定数据</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> &lt;!--组件传值：props属性</span><br><span class="line">	用来标记父组件中哪一个自定义属性可以向子组件传值,若传值成功，使用&#123;&#123;属性名&#125;&#125;访问该值。</span><br><span class="line">  </span><br><span class="line">  --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;props属性、组件传值、动态绑定数据&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- sites数组中每一个对象的id和title用v-bind指令动态绑定数据 --&gt;</span><br><span class="line">			&lt;!-- &lt;site_name v-for=&quot;site in sites&quot; v-bind:id=&quot;site.id&quot; v-bind:title=&quot;site.title&quot; &gt;&lt;/site_name&gt; --&gt;</span><br><span class="line">			&lt;site_name v-for=&quot;site in sites&quot; :id=&quot;site.id&quot; :title=&quot;site.title&quot; &gt;&lt;/site_name&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			</span><br><span class="line">			const code_html = &#123;</span><br><span class="line">				props: [&quot;id&quot;,&quot;title&quot;], //props数组用来接受哪些自定义属性可以子组件传值。</span><br><span class="line">				template: &#x27;&lt;h1&gt;&#123;&#123; id &#125;&#125;,&#123;&#123;title&#125;&#125;&lt;/h1&gt;&#x27; //读取传过来的值</span><br><span class="line">			&#125;;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						sites: [</span><br><span class="line">							&#123;id: 1,title: &quot;百度&quot;&#125;,</span><br><span class="line">							&#123;id: 2,title: &quot;谷歌&quot;&#125;,</span><br><span class="line">							&#123;id: 3,title: &quot;字节&quot;&#125;</span><br><span class="line">						]</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				//注册局部组件</span><br><span class="line">				components: &#123;</span><br><span class="line">					&quot;site_name&quot;: code_html</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="props属性、组件传值、动态绑定数据"><a href="#props属性、组件传值、动态绑定数据" class="headerlink" title="props属性、组件传值、动态绑定数据"></a>props属性、组件传值、动态绑定数据</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue"> &lt;!--组件传值：props属性
+	用来标记父组件中哪一个自定义属性可以向子组件传值,若传值成功，使用&#123;&#123;属性名&#125;&#125;访问该值。
+  
+  --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;props属性、组件传值、动态绑定数据&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- sites数组中每一个对象的id和title用v-bind指令动态绑定数据 --&gt;
+			&lt;!-- &lt;site_name v-for&#x3D;&quot;site in sites&quot; v-bind:id&#x3D;&quot;site.id&quot; v-bind:title&#x3D;&quot;site.title&quot; &gt;&lt;&#x2F;site_name&gt; --&gt;
+			&lt;site_name v-for&#x3D;&quot;site in sites&quot; :id&#x3D;&quot;site.id&quot; :title&#x3D;&quot;site.title&quot; &gt;&lt;&#x2F;site_name&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			
+			const code_html &#x3D; &#123;
+				props: [&quot;id&quot;,&quot;title&quot;], &#x2F;&#x2F;props数组用来接受哪些自定义属性可以子组件传值。
+				template: &#39;&lt;h1&gt;&#123;&#123; id &#125;&#125;,&#123;&#123;title&#125;&#125;&lt;&#x2F;h1&gt;&#39; &#x2F;&#x2F;读取传过来的值
+			&#125;;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						sites: [
+							&#123;id: 1,title: &quot;百度&quot;&#125;,
+							&#123;id: 2,title: &quot;谷歌&quot;&#125;,
+							&#123;id: 3,title: &quot;字节&quot;&#125;
+						]
+					&#125;
+				&#125;,
+				&#x2F;&#x2F;注册局部组件
+				components: &#123;
+					&quot;site_name&quot;: code_html
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413160041226.png" alt="image-20230413160041226"></p>
 <p>自定义组件的属性动态绑定数据</p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413162606202.png" alt="image-20230413162606202"></p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413165711899.png" alt="image-20230413165711899"></p>
-<h1 id="计算属性computed和methods的区别"><a href="#计算属性computed和methods的区别" class="headerlink" title="计算属性computed和methods的区别"></a>计算属性computed和methods的区别</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--计算属性 </span><br><span class="line">	computed用来将一些复杂的业务逻辑放在计算属性中封装，外部调用访问。</span><br><span class="line">	&#123;</span><br><span class="line">		computed: &#123;</span><br><span class="line">			// 定义方法完成复杂业务逻辑</span><br><span class="line">			方法名称(参数列表)&#123;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> --&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;!-- 计算属性computed与methods的区别</span><br><span class="line">	当一个核心算法会被很多地方调用的业务逻辑要封装到computed，这样提高运行效率</span><br><span class="line">	调用方式不同：使用方法名调用computed，使用方法()调用method</span><br><span class="line">	computed基于缓存，只有当依赖的数据发生改变时才会重新去获取数据。</span><br><span class="line">	methods只要函数被调用，都会重新去加载和渲染数据。</span><br><span class="line">  --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;计算属性computed与methods的区别&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;p&gt;传统方式获取字符串反转:&#123;&#123; message.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">			&lt;p&gt;调用计算属性computed获取字符串反转：&#123;&#123; reverseStr &#125;&#125;&lt;/p&gt;</span><br><span class="line">			&lt;p&gt;调用methods获取字符串反转：&#123;&#123; reverseStr2() &#125;&#125;&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						message: &quot;luotao&quot;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				computed: &#123; //计算属性</span><br><span class="line">					// 定义方法完成复杂业务逻辑</span><br><span class="line">					reverseStr()&#123;</span><br><span class="line">						return this.message.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;)</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				methods: &#123; //自定义方法</span><br><span class="line">					// 定义方法完成复杂业务逻辑</span><br><span class="line">					reverseStr2()&#123;</span><br><span class="line">						return this.message.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;)</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="计算属性computed和methods的区别"><a href="#计算属性computed和methods的区别" class="headerlink" title="计算属性computed和methods的区别"></a>计算属性computed和methods的区别</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--计算属性 
+	computed用来将一些复杂的业务逻辑放在计算属性中封装，外部调用访问。
+	&#123;
+		computed: &#123;
+			&#x2F;&#x2F; 定义方法完成复杂业务逻辑
+			方法名称(参数列表)&#123;&#125;
+		&#125;
+	&#125;
+ --&gt;
+ 
+ &lt;!-- 计算属性computed与methods的区别
+	当一个核心算法会被很多地方调用的业务逻辑要封装到computed，这样提高运行效率
+	调用方式不同：使用方法名调用computed，使用方法()调用method
+	computed基于缓存，只有当依赖的数据发生改变时才会重新去获取数据。
+	methods只要函数被调用，都会重新去加载和渲染数据。
+  --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;计算属性computed与methods的区别&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;p&gt;传统方式获取字符串反转:&#123;&#123; message.split(&#39;&#39;).reverse().join(&#39;&#39;) &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;p&gt;调用计算属性computed获取字符串反转：&#123;&#123; reverseStr &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;p&gt;调用methods获取字符串反转：&#123;&#123; reverseStr2() &#125;&#125;&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						message: &quot;luotao&quot;
+					&#125;
+				&#125;,
+				computed: &#123; &#x2F;&#x2F;计算属性
+					&#x2F;&#x2F; 定义方法完成复杂业务逻辑
+					reverseStr()&#123;
+						return this.message.split(&#39;&#39;).reverse().join(&#39;&#39;)
+					&#125;
+				&#125;,
+				methods: &#123; &#x2F;&#x2F;自定义方法
+					&#x2F;&#x2F; 定义方法完成复杂业务逻辑
+					reverseStr2()&#123;
+						return this.message.split(&#39;&#39;).reverse().join(&#39;&#39;)
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230413174350030.png" alt="image-20230413174350030"></p>
-<h1 id="Vue3监听器"><a href="#Vue3监听器" class="headerlink" title="Vue3监听器"></a>Vue3监听器</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--Vue3监听器 </span><br><span class="line">	通过对页面中元素进行监听，当某些事件被触发时，去调用指定的任务。</span><br><span class="line">	Vue提供watch属性来响应监听数据的变化</span><br><span class="line">	步骤：</span><br><span class="line">	1.注册监听</span><br><span class="line">		绑定到vue对象，通过$watch属性注册监听</span><br><span class="line">	2.指定要注册的监听对象,定义监听触发后执行的任务</span><br><span class="line">	&#123;</span><br><span class="line">		Vue实例对象.$watch(&quot;被监听的对象(变量名)&quot;,function(新值,旧值)&#123;// 参数2表示监听触发后执行的任务，通常定义在匿名函数中</span><br><span class="line">		//事件实现</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	3.触发监听</span><br><span class="line">		@click属性：点击后触发</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;watch监听&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;p&gt;统计点击次数:&#123;&#123; count &#125;&#125;&lt;/p&gt;</span><br><span class="line">			&lt;!-- 3.触发监听--&gt;</span><br><span class="line">			&lt;button @click=&quot;count++&quot;&gt;点我&lt;/button&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						count: 0</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			const vm = Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">			// 1.注册监听</span><br><span class="line">			//2.指定要注册的监听对象,定义监听触发后执行的任务</span><br><span class="line">			vm.$watch(&quot;count&quot;,function(nval,oval)&#123;// 参数1表示新值，参数2表示旧值</span><br><span class="line">				// 弹出框</span><br><span class="line">				alert(&quot;计数器的值被改变：&quot; + oval +&quot;改成了：&quot; + nval);</span><br><span class="line">			&#125;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Vue3监听器"><a href="#Vue3监听器" class="headerlink" title="Vue3监听器"></a>Vue3监听器</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--Vue3监听器 
+	通过对页面中元素进行监听，当某些事件被触发时，去调用指定的任务。
+	Vue提供watch属性来响应监听数据的变化
+	步骤：
+	1.注册监听
+		绑定到vue对象，通过$watch属性注册监听
+	2.指定要注册的监听对象,定义监听触发后执行的任务
+	&#123;
+		Vue实例对象.$watch(&quot;被监听的对象(变量名)&quot;,function(新值,旧值)&#123;&#x2F;&#x2F; 参数2表示监听触发后执行的任务，通常定义在匿名函数中
+		&#x2F;&#x2F;事件实现
+		&#125;);
+	&#125;
+	3.触发监听
+		@click属性：点击后触发
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;watch监听&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;p&gt;统计点击次数:&#123;&#123; count &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;!-- 3.触发监听--&gt;
+			&lt;button @click&#x3D;&quot;count++&quot;&gt;点我&lt;&#x2F;button&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						count: 0
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			const vm &#x3D; Vue.createApp(app).mount(&quot;#app&quot;); 
+			&#x2F;&#x2F; 1.注册监听
+			&#x2F;&#x2F;2.指定要注册的监听对象,定义监听触发后执行的任务
+			vm.$watch(&quot;count&quot;,function(nval,oval)&#123;&#x2F;&#x2F; 参数1表示新值，参数2表示旧值
+				&#x2F;&#x2F; 弹出框
+				alert(&quot;计数器的值被改变：&quot; + oval +&quot;改成了：&quot; + nval);
+			&#125;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417114235808.png" alt="image-20230417114235808"></p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417114244601.png" alt="image-20230417114244601"></p>
-<h1 id="Vue3动态样式绑定"><a href="#Vue3动态样式绑定" class="headerlink" title="Vue3动态样式绑定"></a>Vue3动态样式绑定</h1><h2 id="1-class属性样式绑定"><a href="#1-class属性样式绑定" class="headerlink" title="1 class属性样式绑定"></a>1 class属性样式绑定</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- Vue3动态样式绑定</span><br><span class="line">	使用v-bind动态控制页面中元素样式</span><br><span class="line"> --&gt;</span><br><span class="line"> &lt;!-- class属性样式绑定</span><br><span class="line">	&#123;</span><br><span class="line">		条件为真，则对应的属性值会被渲染，否则不会被渲染</span><br><span class="line">		&lt;div v-bind:class=&quot;&#123;&#x27;属性值&#x27;: 条件&#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;div class=&quot;static&quot; v-bind:class=&quot;&#123;&#x27;样式属性名1&#x27;: 条件1, &#x27;样式属性名2&#x27;: 条件2...&#125;&quot;&gt;1.多个值来控制&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		底层会自动读取对象的属性值，由属性值的真假决定是否被渲染 </span><br><span class="line">		&lt;div class=&quot;static&quot; :class=&quot;样式对象&quot;&gt;2.通过对象的方式绑定样式到元素上&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;div class=&quot;static&quot; :class=&quot;[key1,key2]&quot;&gt;3.通过数组的方式绑定样式到元素上&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		条件为真，则去key1的值，否则取&#x27;&#x27;</span><br><span class="line">		&lt;div class=&quot;static&quot; :class=&quot;[条件1 ? key1 : &#x27;&#x27;, 条件2 ? key2 : &#x27;&#x27;]&quot;&gt;4.三目运算符&lt;/div&gt;</span><br><span class="line">			</span><br><span class="line">		return&#123;</span><br><span class="line">			// 封装css样式对象</span><br><span class="line">			clsObj: &#123;</span><br><span class="line">				// 样式属性名：是否显示该样式</span><br><span class="line">			&#125;,</span><br><span class="line">			// 数组定义样式</span><br><span class="line">			key1: 样式属性名1</span><br><span class="line">			key2: 样式属性名2</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">--&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;class属性样式绑定&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;!-- 样式 --&gt;</span><br><span class="line">		&lt;style&gt;</span><br><span class="line">			.cls&#123;</span><br><span class="line">				width: 100px;</span><br><span class="line">				height: 100px;</span><br><span class="line">				background: red;</span><br><span class="line">			&#125;</span><br><span class="line">			.active&#123;</span><br><span class="line">				border: 1px solid red;</span><br><span class="line">				background: pink;</span><br><span class="line">			&#125;</span><br><span class="line">			.danger&#123;</span><br><span class="line">				color: red;</span><br><span class="line">			&#125;</span><br><span class="line">			.static&#123; //默认呈现</span><br><span class="line">				width: 200px;</span><br><span class="line">				height: 200px;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- isActive为真则将cls作为class的值，否则class无取值 --&gt;</span><br><span class="line">			&lt;div v-bind:class=&quot;&#123;&#x27;cls&#x27;: iscls&#125;&quot;&gt;单个值来控制&lt;/div&gt;</span><br><span class="line">			&lt;div class=&quot;static&quot; v-bind:class=&quot;&#123;&#x27;active&#x27;: isActive, &#x27;danger&#x27;: isDanger&#125;&quot;&gt;多个值来控制&lt;/div&gt;</span><br><span class="line">			&lt;!-- 底层会自动读取clsObj对象的属性值，由属性值的真假决定是否被渲染 --&gt;</span><br><span class="line">			&lt;div class=&quot;static&quot; :class=&quot;clsObj&quot;&gt;通过对象的方式绑定样式到元素上&lt;/div&gt;</span><br><span class="line">			&lt;div class=&quot;static&quot; :class=&quot;[activeCls,dangerCls]&quot;&gt;通过数组的方式绑定样式到元素上&lt;/div&gt;</span><br><span class="line">			&lt;div class=&quot;static&quot; :class=&quot;[isActive ? activeCls : &#x27;&#x27;, isDanger ? dangerCls : &#x27;&#x27;]&quot;&gt;三目运算符&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						iscls: true ,    //用于控制.cls样式是否展示</span><br><span class="line">						</span><br><span class="line">						isActive: true, //显示该样式</span><br><span class="line">						isDanger: true ,//显示该样式</span><br><span class="line">						</span><br><span class="line">						// 封装css样式对象</span><br><span class="line">						clsObj: &#123;</span><br><span class="line">							// 样式属性名：是否显示该样式</span><br><span class="line">							&quot;active&quot;: true,</span><br><span class="line">							&quot;danger&quot;: true</span><br><span class="line">						&#125;,</span><br><span class="line">						// 数组定义样式</span><br><span class="line">						activeCls: &quot;active&quot;, // key:样式属性名</span><br><span class="line">						dangerCls: &quot;danger&quot;</span><br><span class="line">						</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Vue3动态样式绑定"><a href="#Vue3动态样式绑定" class="headerlink" title="Vue3动态样式绑定"></a>Vue3动态样式绑定</h1><h2 id="1-class属性样式绑定"><a href="#1-class属性样式绑定" class="headerlink" title="1 class属性样式绑定"></a>1 class属性样式绑定</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- Vue3动态样式绑定
+	使用v-bind动态控制页面中元素样式
+ --&gt;
+ &lt;!-- class属性样式绑定
+	&#123;
+		条件为真，则对应的属性值会被渲染，否则不会被渲染
+		&lt;div v-bind:class&#x3D;&quot;&#123;&#39;属性值&#39;: 条件&#125;&quot;&gt;&lt;&#x2F;div&gt;
+		
+		&lt;div class&#x3D;&quot;static&quot; v-bind:class&#x3D;&quot;&#123;&#39;样式属性名1&#39;: 条件1, &#39;样式属性名2&#39;: 条件2...&#125;&quot;&gt;1.多个值来控制&lt;&#x2F;div&gt;
+		
+		底层会自动读取对象的属性值，由属性值的真假决定是否被渲染 
+		&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;样式对象&quot;&gt;2.通过对象的方式绑定样式到元素上&lt;&#x2F;div&gt;
+		
+		&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;[key1,key2]&quot;&gt;3.通过数组的方式绑定样式到元素上&lt;&#x2F;div&gt;
+		
+		条件为真，则去key1的值，否则取&#39;&#39;
+		&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;[条件1 ? key1 : &#39;&#39;, 条件2 ? key2 : &#39;&#39;]&quot;&gt;4.三目运算符&lt;&#x2F;div&gt;
+			
+		return&#123;
+			&#x2F;&#x2F; 封装css样式对象
+			clsObj: &#123;
+				&#x2F;&#x2F; 样式属性名：是否显示该样式
+			&#125;,
+			&#x2F;&#x2F; 数组定义样式
+			key1: 样式属性名1
+			key2: 样式属性名2
+		&#125;
+	&#125;
+	
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;class属性样式绑定&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+		&lt;!-- 样式 --&gt;
+		&lt;style&gt;
+			.cls&#123;
+				width: 100px;
+				height: 100px;
+				background: red;
+			&#125;
+			.active&#123;
+				border: 1px solid red;
+				background: pink;
+			&#125;
+			.danger&#123;
+				color: red;
+			&#125;
+			.static&#123; &#x2F;&#x2F;默认呈现
+				width: 200px;
+				height: 200px;
+			&#125;
+		&lt;&#x2F;style&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- isActive为真则将cls作为class的值，否则class无取值 --&gt;
+			&lt;div v-bind:class&#x3D;&quot;&#123;&#39;cls&#39;: iscls&#125;&quot;&gt;单个值来控制&lt;&#x2F;div&gt;
+			&lt;div class&#x3D;&quot;static&quot; v-bind:class&#x3D;&quot;&#123;&#39;active&#39;: isActive, &#39;danger&#39;: isDanger&#125;&quot;&gt;多个值来控制&lt;&#x2F;div&gt;
+			&lt;!-- 底层会自动读取clsObj对象的属性值，由属性值的真假决定是否被渲染 --&gt;
+			&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;clsObj&quot;&gt;通过对象的方式绑定样式到元素上&lt;&#x2F;div&gt;
+			&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;[activeCls,dangerCls]&quot;&gt;通过数组的方式绑定样式到元素上&lt;&#x2F;div&gt;
+			&lt;div class&#x3D;&quot;static&quot; :class&#x3D;&quot;[isActive ? activeCls : &#39;&#39;, isDanger ? dangerCls : &#39;&#39;]&quot;&gt;三目运算符&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						iscls: true ,    &#x2F;&#x2F;用于控制.cls样式是否展示
+						
+						isActive: true, &#x2F;&#x2F;显示该样式
+						isDanger: true ,&#x2F;&#x2F;显示该样式
+						
+						&#x2F;&#x2F; 封装css样式对象
+						clsObj: &#123;
+							&#x2F;&#x2F; 样式属性名：是否显示该样式
+							&quot;active&quot;: true,
+							&quot;danger&quot;: true
+						&#125;,
+						&#x2F;&#x2F; 数组定义样式
+						activeCls: &quot;active&quot;, &#x2F;&#x2F; key:样式属性名
+						dangerCls: &quot;danger&quot;
+						
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417134237393.png" alt="image-20230417134237393"></p>
 <p>都为真时：</p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417150343822.png" alt="image-20230417150343822"></p>
-<h2 id="2-style属性样式绑定"><a href="#2-style属性样式绑定" class="headerlink" title="2 style属性样式绑定"></a>2 style属性样式绑定</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--style属性样式绑定 </span><br><span class="line">	1.将style的属性的取值定义在Vue中</span><br><span class="line">	2.将style的属性的值定义成一个对象，然后通过Vue去绑定</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;style属性样式绑定&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;!-- &lt;p style=&quot;color:red;fontsize:14px;&quot;&gt;Vue控制CSS内联样式的动态加载&lt;/p&gt; --&gt;</span><br><span class="line">			&lt;div :style=&quot;&#123;color: activeColor,fontSize: fontSize&#125;&quot;&gt;将style的属性的取值定义在Vue中&lt;/div&gt;</span><br><span class="line">			&lt;div :style=&quot;styleObj&quot;&gt;将style的属性的值定义成一个对象，然后通过Vue去绑定&lt;/div&gt;</span><br><span class="line">			&lt;div :style=&quot;eleSize&quot;&gt;通过数组接收&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						activeColor: &quot;red&quot;,</span><br><span class="line">						fontSize: &quot;14px&quot;,</span><br><span class="line">						styleObj: &#123;</span><br><span class="line">							// CSS样式属性名：属性值</span><br><span class="line">							// CSS的短线要用驼峰命名替代,如font-size要写为fontSize</span><br><span class="line">							color: &quot;red&quot;,</span><br><span class="line">							fontSize: &quot;24px&quot;</span><br><span class="line">						&#125;,</span><br><span class="line">						eleSize: &#123;</span><br><span class="line">							width: &quot;200px&quot;,</span><br><span class="line">							height: &quot;200px&quot;,</span><br><span class="line">							border: &quot;1px solid red&quot;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-style属性样式绑定"><a href="#2-style属性样式绑定" class="headerlink" title="2 style属性样式绑定"></a>2 style属性样式绑定</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--style属性样式绑定 
+	1.将style的属性的取值定义在Vue中
+	2.将style的属性的值定义成一个对象，然后通过Vue去绑定
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;style属性样式绑定&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- &lt;p style&#x3D;&quot;color:red;fontsize:14px;&quot;&gt;Vue控制CSS内联样式的动态加载&lt;&#x2F;p&gt; --&gt;
+			&lt;div :style&#x3D;&quot;&#123;color: activeColor,fontSize: fontSize&#125;&quot;&gt;将style的属性的取值定义在Vue中&lt;&#x2F;div&gt;
+			&lt;div :style&#x3D;&quot;styleObj&quot;&gt;将style的属性的值定义成一个对象，然后通过Vue去绑定&lt;&#x2F;div&gt;
+			&lt;div :style&#x3D;&quot;eleSize&quot;&gt;通过数组接收&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						activeColor: &quot;red&quot;,
+						fontSize: &quot;14px&quot;,
+						styleObj: &#123;
+							&#x2F;&#x2F; CSS样式属性名：属性值
+							&#x2F;&#x2F; CSS的短线要用驼峰命名替代,如font-size要写为fontSize
+							color: &quot;red&quot;,
+							fontSize: &quot;24px&quot;
+						&#125;,
+						eleSize: &#123;
+							width: &quot;200px&quot;,
+							height: &quot;200px&quot;,
+							border: &quot;1px solid red&quot;
+						&#125;
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417155554206.png" alt="image-20230417155554206"></p>
-<h2 id="3-组件上使用动态样式"><a href="#3-组件上使用动态样式" class="headerlink" title="3 组件上使用动态样式"></a>3 组件上使用动态样式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--组件上使用动态样式 </span><br><span class="line">	通过class属性动态的向子组件传递CSS样式</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;组件上使用动态样式&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;!-- 定义样式 --&gt;</span><br><span class="line">		&lt;style&gt;</span><br><span class="line">			.cls&#123;</span><br><span class="line">				color: red;</span><br><span class="line">				background: green;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;my-component class=&quot;cls&quot;&gt;&lt;/my-component&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const myComponent = &#123;</span><br><span class="line">				//props:[&quot;class&quot;] 动态绑定元素的属性取值不能使用props</span><br><span class="line">				// $attrs表示元素的所有属性(id、class、title...)</span><br><span class="line">				template: &#x27;&lt;h1 :class=&quot;$attrs.class&quot;&gt;1.通过class属性动态的向子组件传递CSS样式&lt;/h1&gt;&#x27;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				// 注册局部组件</span><br><span class="line">				components: &#123;</span><br><span class="line">					&quot;my-component&quot;: myComponent</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="3-组件上使用动态样式"><a href="#3-组件上使用动态样式" class="headerlink" title="3 组件上使用动态样式"></a>3 组件上使用动态样式</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--组件上使用动态样式 
+	通过class属性动态的向子组件传递CSS样式
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;组件上使用动态样式&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+		&lt;!-- 定义样式 --&gt;
+		&lt;style&gt;
+			.cls&#123;
+				color: red;
+				background: green;
+			&#125;
+		&lt;&#x2F;style&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;my-component class&#x3D;&quot;cls&quot;&gt;&lt;&#x2F;my-component&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const myComponent &#x3D; &#123;
+				&#x2F;&#x2F;props:[&quot;class&quot;] 动态绑定元素的属性取值不能使用props
+				&#x2F;&#x2F; $attrs表示元素的所有属性(id、class、title...)
+				template: &#39;&lt;h1 :class&#x3D;&quot;$attrs.class&quot;&gt;1.通过class属性动态的向子组件传递CSS样式&lt;&#x2F;h1&gt;&#39;
+			&#125;
+			
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;,
+				&#x2F;&#x2F; 注册局部组件
+				components: &#123;
+					&quot;my-component&quot;: myComponent
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417165135357.png" alt="image-20230417165135357"></p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417165250592.png" alt="image-20230417165250592"></p>
-<h1 id="Vue3事件处理"><a href="#Vue3事件处理" class="headerlink" title="Vue3事件处理"></a>Vue3事件处理</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--事件处理 --&gt;</span><br><span class="line">&lt;!-- v-on指令</span><br><span class="line">	监听页面中的DOM元素的点击事件</span><br><span class="line">	&lt;button v-on:click=&quot;方法名称&quot;&gt;&lt;/button&gt;</span><br><span class="line">	&lt;button @click=&quot;方法名称&quot;&gt;&lt;/button&gt; //简写</span><br><span class="line"> --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;v-on指令&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;button @click=&quot;myfun()&quot;&gt;点我&lt;/button&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						name: &quot;luotao&quot;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				methods: &#123;</span><br><span class="line">					myfun()&#123;</span><br><span class="line">						alert(&quot;name的值是:&quot; + this.name);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Vue3事件处理"><a href="#Vue3事件处理" class="headerlink" title="Vue3事件处理"></a>Vue3事件处理</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--事件处理 --&gt;
+&lt;!-- v-on指令
+	监听页面中的DOM元素的点击事件
+	&lt;button v-on:click&#x3D;&quot;方法名称&quot;&gt;&lt;&#x2F;button&gt;
+	&lt;button @click&#x3D;&quot;方法名称&quot;&gt;&lt;&#x2F;button&gt; &#x2F;&#x2F;简写
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;v-on指令&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;button @click&#x3D;&quot;myfun()&quot;&gt;点我&lt;&#x2F;button&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						name: &quot;luotao&quot;
+					&#125;
+				&#125;,
+				methods: &#123;
+					myfun()&#123;
+						alert(&quot;name的值是:&quot; + this.name);
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417171244054.png" alt="image-20230417171244054"></p>
-<h1 id="Vue3表单"><a href="#Vue3表单" class="headerlink" title="Vue3表单"></a>Vue3表单</h1><p>文本数据的双向绑定：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--Vue3表单 </span><br><span class="line">	原理：语法糖。ViewModel监听元素，元素一旦改变就去读取改变的数据并传给Model，实现数据同步。</span><br><span class="line">--&gt;</span><br><span class="line">&lt;!-- 文本数据的双向绑定 --&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;使用v-model指令完成表单中数据的双向绑定。&lt;/title&gt;</span><br><span class="line">		&lt;!-- 引入最新Vue3脚本 --&gt;</span><br><span class="line">		&lt;script src=&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">			&lt;input type=&quot;text&quot; v-model=&quot;message&quot;/&gt;</span><br><span class="line">			&lt;br&gt;</span><br><span class="line">			&lt;p&gt;input中输入的内容是: &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line">			&lt;br&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;textarea v-model= &quot;msg&quot; placeholder=&quot;输入多行内容...&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">			&lt;p&gt;textarea中输入的内容是：&#123;&#123; msg &#125;&#125;&lt;/p&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app = &#123;</span><br><span class="line">			// 初始化数据</span><br><span class="line">				data()&#123;</span><br><span class="line">					return&#123;</span><br><span class="line">						message: &#x27;&#x27;,</span><br><span class="line">						msg: &#x27;&#x27;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 挂载</span><br><span class="line">			Vue.createApp(app).mount(&quot;#app&quot;); </span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Vue3表单"><a href="#Vue3表单" class="headerlink" title="Vue3表单"></a>Vue3表单</h1><p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230418113821856.png" alt="image-20230418113821856"></p>
+<h2 id="1-文本数据-text-的双向绑定"><a href="#1-文本数据-text-的双向绑定" class="headerlink" title="1 文本数据(text)的双向绑定"></a>1 文本数据(text)的双向绑定</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--Vue3表单 
+	原理：语法糖。ViewModel监听元素，元素一旦改变就去读取改变的数据并传给Model，实现数据同步。
+--&gt;
+&lt;!-- 文本数据(text)的双向绑定 
+	* input 单文本输入
+	* textarea 多行文本输入
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;文本数据(text)的双向绑定 &lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;message&quot;&#x2F;&gt;
+			&lt;br&gt;
+			&lt;p&gt;input中输入的内容是: &#123;&#123; message &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;br&gt;
+			
+			&lt;textarea v-model&#x3D; &quot;msg&quot; placeholder&#x3D;&quot;输入多行内容...&quot;&gt;&lt;&#x2F;textarea&gt;
+			&lt;p&gt;textarea中输入的内容是：&#123;&#123; msg &#125;&#125;&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						message: &#39;&#39;,
+						msg: &#39;&#39;
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417173845339.png" alt="image-20230417173845339"></p>
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230417175119362.png" alt="image-20230417175119362"></p>
+<h2 id="2-复选框checkbox"><a href="#2-复选框checkbox" class="headerlink" title="2 复选框checkbox"></a>2 复选框checkbox</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--复选框(checkbox) 
+	绑定布尔类型
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;复选框checkbox&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;h1&gt;单个复选框，用布尔值绑定勾选状态&lt;&#x2F;h1&gt;
+			&lt;input type&#x3D;&quot;checkbox&quot; v-model&#x3D;&quot;checked&quot;&#x2F;&gt;勾选我
+			
+			&lt;h1&gt;多个复选框,绑定value属性值，用数组来接收&lt;&#x2F;h1&gt;
+			&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;google&quot; value&#x3D;&quot;google&quot; v-model&#x3D;&quot;checkedNames&quot; &#x2F;&gt;谷歌&lt;&#x2F;br&gt;
+			&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;baidu&quot; value&#x3D;&quot;baidu&quot; v-model&#x3D;&quot;checkedNames&quot; &#x2F;&gt;百度&lt;&#x2F;br&gt;
+			&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;byte&quot; value&#x3D;&quot;byte&quot; v-model&#x3D;&quot;checkedNames&quot; &#x2F;&gt;字节&lt;&#x2F;br&gt;
+			&lt;p&gt;数组输出: &#123;&#123; checkedNames &#125;&#125;&lt;&#x2F;p&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						checked: false,
+						checkedNames: []
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230418101314712.png" alt="image-20230418101314712"></p>
+<h2 id="3-单选框radio"><a href="#3-单选框radio" class="headerlink" title="3 单选框radio"></a>3 单选框radio</h2><h2 id="4-下拉列表select"><a href="#4-下拉列表select" class="headerlink" title="4 下拉列表select"></a>4 下拉列表select</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 下拉列表select
+	若下拉列表中有value属性，则双向绑定的是value属性的取值，否则绑定的是标签的内容
+	multiple指定下拉列表可以同时选择多个元素
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;下拉列表select&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;div&gt;
+				&lt;select v-model&#x3D;&quot;sel&quot; multiple&gt;
+					&lt;option disabled value&#x3D;&quot;&quot;&gt;请选择...&lt;&#x2F;option&gt;
+					&lt;option v-for&#x3D;&quot;opt in opts&quot; :value&#x3D;&quot;opt.value&quot;&gt;&#123;&#123; opt.txt &#125;&#125;&lt;&#x2F;option&gt;
+					&lt;option&gt;A选项&lt;&#x2F;option&gt;
+					&lt;option&gt;B选项&lt;&#x2F;option&gt;
+					&lt;option&gt;C选项&lt;&#x2F;option&gt;
+				&lt;&#x2F;select&gt;
+				&lt;p&gt;选择的值是：&#123;&#123; sel &#125;&#125;&lt;&#x2F;p&gt;
+			&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						sel: &quot;&quot; ,&#x2F;&#x2F;存储用户选择的下拉列表项的内容
+						opts: [
+							&#123;txt: &quot;百度&quot;,value: &quot;baidu&quot;&#125;,
+							&#123;txt: &quot;字节&quot;,value: &quot;byte&quot;&#125;,
+							&#123;txt: &quot;谷歌&quot;,value: &quot;google&quot;&#125;
+						]
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230418113617676.png" alt="image-20230418113617676"></p>
+<h2 id="Vue3钩子函数"><a href="#Vue3钩子函数" class="headerlink" title="Vue3钩子函数"></a>Vue3钩子函数</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 钩子函数 
+	生命周期：vue对象从被创建到挂载到页面的DOM元素，过程中数据的更新，最后Vue对象被回收。
+	Vue提供了生命周期中不同阶段有不同的方法对应，这些方法叫钩子函数。
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const app &#x3D; &#123;
+			&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;
+			&#125;;
+			
+			&#x2F;&#x2F; 挂载
+			Vue.createApp(app).mount(&quot;#app&quot;); 
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 ]]></content>
   </entry>
   <entry>
@@ -213,6 +1445,27 @@
     <url>/2023/03/27/temp/</url>
     <content><![CDATA[<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 跨数据库复制表</span></span><br><span class="line"><span class="comment">-- 当表目标表存在时：</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 目的数据库..表 <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 源数据库..表</span><br><span class="line"><span class="comment">-- 当目标表不存在时：</span></span><br><span class="line"><span class="comment">-- select * into 目的数据库..表 from 源数据库..表</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">into</span> Chips.dbo.getnumberid <span class="keyword">from</span> [<span class="keyword">user</span>].dbo.getnumberid</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2023/04/18/test/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Hello</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>about me</title>
+    <url>/2023/04/18/about-me/</url>
+    <content><![CDATA[<h1 id="Work-and-rest"><a href="#Work-and-rest" class="headerlink" title="Work and rest"></a>Work and rest</h1><ul>
+<li>5:30 wake up</li>
+<li>22:00 sleep</li>
+</ul>
+<h1 id="Perseverance-prevails"><a href="#Perseverance-prevails" class="headerlink" title="Perseverance prevails"></a>Perseverance prevails</h1><ul>
+<li>Keep moving</li>
+<li>Persist in reading</li>
+<li>Continuous learning</li>
+</ul>
 ]]></content>
   </entry>
 </search>
