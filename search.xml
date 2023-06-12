@@ -305,6 +305,32 @@ $ <span class="token function">git</span> config <span class="token parameter va
       </tags>
   </entry>
   <entry>
+    <title>about me</title>
+    <url>/2023/04/18/about-me/</url>
+    <content><![CDATA[<h1 id="Work-and-rest"><a href="#Work-and-rest" class="headerlink" title="Work and rest"></a>Work and rest</h1><ul>
+<li>5:30 wake up</li>
+<li>22:00 sleep</li>
+</ul>
+<h1 id="Perseverance-prevails"><a href="#Perseverance-prevails" class="headerlink" title="Perseverance prevails"></a>Perseverance prevails</h1><ul>
+<li>Keep moving</li>
+<li>Persist in reading</li>
+<li>Continuous learning</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>temp</title>
+    <url>/2023/03/27/temp/</url>
+    <content><![CDATA[<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 跨数据库复制表</span>
+<span class="token comment">-- 当表目标表存在时：</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 目的数据库<span class="token punctuation">.</span><span class="token punctuation">.</span>表 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 源数据库<span class="token punctuation">.</span><span class="token punctuation">.</span>表
+<span class="token comment">-- 当目标表不存在时：</span>
+<span class="token comment">-- select * into 目的数据库..表 from 源数据库..表</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">into</span> Chips<span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid <span class="token keyword">from</span> <span class="token punctuation">[</span><span class="token keyword">user</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Vue3学习笔记</title>
     <url>/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Vue3简介"><a href="#Vue3简介" class="headerlink" title="Vue3简介"></a>Vue3简介</h1><p>官网：<a href="http://v3.cn.vuejs.org/">http://v3.cn.vuejs.org</a></p>
@@ -1906,46 +1932,6 @@ Vue语法解析：
 <h1 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h1>]]></content>
   </entry>
   <entry>
-    <title>temp</title>
-    <url>/2023/03/27/temp/</url>
-    <content><![CDATA[<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 跨数据库复制表</span>
-<span class="token comment">-- 当表目标表存在时：</span>
-<span class="token keyword">insert</span> <span class="token keyword">into</span> 目的数据库<span class="token punctuation">.</span><span class="token punctuation">.</span>表 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 源数据库<span class="token punctuation">.</span><span class="token punctuation">.</span>表
-<span class="token comment">-- 当目标表不存在时：</span>
-<span class="token comment">-- select * into 目的数据库..表 from 源数据库..表</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">into</span> Chips<span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid <span class="token keyword">from</span> <span class="token punctuation">[</span><span class="token keyword">user</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>about me</title>
-    <url>/2023/04/18/about-me/</url>
-    <content><![CDATA[<h1 id="Work-and-rest"><a href="#Work-and-rest" class="headerlink" title="Work and rest"></a>Work and rest</h1><ul>
-<li>5:30 wake up</li>
-<li>22:00 sleep</li>
-</ul>
-<h1 id="Perseverance-prevails"><a href="#Perseverance-prevails" class="headerlink" title="Perseverance prevails"></a>Perseverance prevails</h1><ul>
-<li>Keep moving</li>
-<li>Persist in reading</li>
-<li>Continuous learning</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>chips入职考试</title>
-    <url>/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/</url>
-    <content><![CDATA[<h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
-<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
-<ul>
-<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
-<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
-<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
-<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
-<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
-</ul>
-<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>]]></content>
-  </entry>
-  <entry>
     <title>wifi破解</title>
     <url>/2023/04/21/wifi%E7%A0%B4%E8%A7%A3/</url>
     <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//是否支持监听
@@ -1964,5 +1950,19 @@ aircrack-ng <span class="token parameter variable">-a2</span> <span class="token
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>chips入职考试</title>
+    <url>/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
+<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
+<ul>
+<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
+<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
+<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
+<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
+<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
+</ul>
+<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>]]></content>
   </entry>
 </search>
