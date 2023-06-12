@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Tue Jun 13 2023 08:00:00 GMT+0800 (中国标准时间)</title>
+    <url>/2023/06/13/2023-06-13/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>diary 我们谁都不是隆中对里那个文韬武略的诸葛孔明，坐在深山里就对外面的世界了如指掌，动动脑子就能左右一场战局的胜败。更多时候，需要我们亲身去实践，去体验，去反思，去接受生活给予你的选择，当你做到无懈可击时再去重新选择。而不是坐在家里，苦苦思考“我的未来在哪里”，那不是迷茫，那是懒惰。 如果一个人没有太大的不幸遭遇，但又始终穷苦潦倒，要嘛他好吃懒做，要嘛就是不思进取。 如果你去同情某一个人，那么潜意识里就会背负上他的命运。 这个工资，大城市的所有资源都与你无关，你买不了房，买不了车，大概率也谈不起恋爱，享受着大城市的便利，却享受不了大城市的资源，到了一定的年龄，被这个大城市淘汰，是必然的事情。但是想要改变，娱乐是找不到答案的。真想改变自己，先把手机你的抖音卸载了，多买点书看，一个月至少读一本。心态上，就一句话，跳出舒适圈。言尽于此。 你过去的种种经历，就像人生中的一颗颗珍珠，当你在未来某一天的时候找到了那根线，你就会把他们全部串联起来，变成美丽的项链。</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git学习笔记</title>
+    <url>/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>​        Linus在1991年创建了开源的Linux，为了维护代码库，选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。开发Samba的Andrew试图破解BitKeeper的协议被BitMover公司发现了，于是BitMover公司收回Linux社区的免费使用权。Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git。Git迅速成为最流行的分布式版本控制系统，2008年，GitHub网站上线为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub。</p>
+<h1 id="集中式VS分布式"><a href="#集中式VS分布式" class="headerlink" title="集中式VS分布式"></a>集中式VS分布式</h1><h2 id="1-集中式"><a href="#1-集中式" class="headerlink" title="1 集中式"></a>1 集中式</h2><p>​        版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421094548814.png" alt="image-20230421094548814"></p>
+<p>缺点：</p>
+<ul>
+<li>必须联网工作(网速慢导致提交慢)。</li>
+<li>若中央服务器出现问题，所有人无法工作。</li>
+</ul>
+<h2 id="2-分布式"><a href="#2-分布式" class="headerlink" title="2 分布式"></a>2 分布式</h2><p>每个人的电脑都是一个完整的版本库，无需联网。多人协作时，若A在自己电脑上修改了F文件，B也在自己电脑上修改了F文件，只需将各自的修改推送给对方就可以看到对方的修改了。</p>
+<p>在推送版本库的修改时，可能电脑相互间访问不了，所以分布式通常有一台充当”中央服务器”的电脑用来方便”交换”修改。</p>
+<p>优点：</p>
+<ul>
+<li>安全性高(因为每个人电脑都有完整的版本库，某一台电脑坏掉可以从其他人那里复制)</li>
+<li>分支管理</li>
+</ul>
+<h1 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"luotao"</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"coder@luotao@gmail.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="工作区、暂存区和版本库"><a href="#工作区、暂存区和版本库" class="headerlink" title="工作区、暂存区和版本库"></a>工作区、暂存区和版本库</h1><h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区：能看到的目录，如例子中的learngit</p>
+<p>暂存区：版本库中的stage(或者叫index)</p>
+<h2 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h2><p><strong>工作区</strong>有个隐藏目录.git是Git的版本库。版本库repository即仓库(目录),库里所有文件都被git管理起来，每个文件的更新都能跟踪，以便在将来某个时刻可以还原。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建工作区</span>
+<span class="token function">mkdir</span> learngit
+<span class="token builtin class-name">cd</span> learngit
+<span class="token builtin class-name">pwd</span>
+<span class="token comment"># Git管理该仓库</span>
+<span class="token function">git</span> init <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103015235.png" alt="image-20230421103015235"></p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103005144.png" alt="image-20230421103005144"></p>
+<h2 id="把文件添加到版本库"><a href="#把文件添加到版本库" class="headerlink" title="把文件添加到版本库"></a>把文件添加到版本库</h2><p>创建readme.txt文件</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103617658.png" alt="image-20230421103617658"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将文件添加到仓库</span>
+<span class="token function">git</span> <span class="token function">add</span> readme.txt
+<span class="token comment"># 将文件提交到仓库,-m &lt;提交说明></span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"wrote a readme file"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104350344.png" alt="image-20230421104350344"></p>
+<h2 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h2><p>需要提交的文件修改全部放到暂存区，然后一次性提交暂存区的所有修改。</p>
+<p>往版本库添加时分两步：</p>
+<ul>
+<li>git add 把文件修改添加到暂存区</li>
+<li>git commit 把暂存区的所有内容提交到当前分支</li>
+</ul>
+<p>创建版本库时git自动创建唯一master分支。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421114654775.png" alt="image-20230421114654775"></p>
+<p>修改readme.txt文件</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104605464.png" alt="image-20230421104605464"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看修改结果</span>
+<span class="token function">git</span> status
+<span class="token comment"># 查看上次是如何修改的，修改内容</span>
+<span class="token function">git</span> <span class="token function">diff</span> readme.txt
+<span class="token comment"># 添加修改</span>
+<span class="token function">git</span> <span class="token function">add</span> readme.txt
+<span class="token comment"># 查看添加状态</span>
+<span class="token function">git</span> status
+<span class="token comment"># 提交修改</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add 666"</span>
+<span class="token comment"># 查看提交状态</span>
+<span class="token function">git</span> status<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421105618941.png" alt="image-20230421105618941"></p>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
+<li>git会把每次提交串成一条历史时间线。</li>
+<li>HEAD表示当前版本，HEAD^表示上个版本，HEAD~100表示往上100个版本</li>
+</ul>
+<p>Git内部有个指向当前版本的HEAD指针，回退版本时，仅把HEAD指针改变。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421111547768.png" alt="image-20230421111547768"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看提交的历史记录,以便确定要回退到哪个版本。</span>
+<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421110635353.png" alt="image-20230421110635353"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 回退到上个版本</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> HEAD^
+<span class="token comment"># 查看版本库状态</span>
+<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当你用<code>$ git reset --hard HEAD^</code>回退到<code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的commit id。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看命令历史记录，以便确定要回到未来的哪个版本。</span>
+<span class="token function">git</span> reflog
+<span class="token comment"># 回退到未来指定版本</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> 5cef<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421112342557.png" alt="image-20230421112342557"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>SqlServer入门</title>
     <url>/2023/03/20/SqlServer%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h4 id="列的数据类型"><a href="#列的数据类型" class="headerlink" title="列的数据类型"></a>列的数据类型</h4><p>drop database Demo<br>Unicode：<br>    两个字节存储一个字符<br>nvarchar<br>    Unicode型可变字符<br>Char<br>    固定字符</p>
@@ -192,20 +290,6 @@
       <tags>
         <tag>database</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>about me</title>
-    <url>/2023/04/18/about-me/</url>
-    <content><![CDATA[<h1 id="Work-and-rest"><a href="#Work-and-rest" class="headerlink" title="Work and rest"></a>Work and rest</h1><ul>
-<li>5:30 wake up</li>
-<li>22:00 sleep</li>
-</ul>
-<h1 id="Perseverance-prevails"><a href="#Perseverance-prevails" class="headerlink" title="Perseverance prevails"></a>Perseverance prevails</h1><ul>
-<li>Keep moving</li>
-<li>Persist in reading</li>
-<li>Continuous learning</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>Vue3学习笔记</title>
@@ -1821,94 +1905,32 @@ Vue语法解析：
 ]]></content>
   </entry>
   <entry>
-    <title>Git学习笔记</title>
-    <url>/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>​        Linus在1991年创建了开源的Linux，为了维护代码库，选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。开发Samba的Andrew试图破解BitKeeper的协议被BitMover公司发现了，于是BitMover公司收回Linux社区的免费使用权。Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git。Git迅速成为最流行的分布式版本控制系统，2008年，GitHub网站上线为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub。</p>
-<h1 id="集中式VS分布式"><a href="#集中式VS分布式" class="headerlink" title="集中式VS分布式"></a>集中式VS分布式</h1><h2 id="1-集中式"><a href="#1-集中式" class="headerlink" title="1 集中式"></a>1 集中式</h2><p>​        版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421094548814.png" alt="image-20230421094548814"></p>
-<p>缺点：</p>
-<ul>
-<li>必须联网工作(网速慢导致提交慢)。</li>
-<li>若中央服务器出现问题，所有人无法工作。</li>
+    <title>about me</title>
+    <url>/2023/04/18/about-me/</url>
+    <content><![CDATA[<h1 id="Work-and-rest"><a href="#Work-and-rest" class="headerlink" title="Work and rest"></a>Work and rest</h1><ul>
+<li>5:30 wake up</li>
+<li>22:00 sleep</li>
 </ul>
-<h2 id="2-分布式"><a href="#2-分布式" class="headerlink" title="2 分布式"></a>2 分布式</h2><p>每个人的电脑都是一个完整的版本库，无需联网。多人协作时，若A在自己电脑上修改了F文件，B也在自己电脑上修改了F文件，只需将各自的修改推送给对方就可以看到对方的修改了。</p>
-<p>在推送版本库的修改时，可能电脑相互间访问不了，所以分布式通常有一台充当”中央服务器”的电脑用来方便”交换”修改。</p>
-<p>优点：</p>
-<ul>
-<li>安全性高(因为每个人电脑都有完整的版本库，某一台电脑坏掉可以从其他人那里复制)</li>
-<li>分支管理</li>
+<h1 id="Perseverance-prevails"><a href="#Perseverance-prevails" class="headerlink" title="Perseverance prevails"></a>Perseverance prevails</h1><ul>
+<li>Keep moving</li>
+<li>Persist in reading</li>
+<li>Continuous learning</li>
 </ul>
-<h1 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</span>
-$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"luotao"</span>
-$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"coder@luotao@gmail.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="工作区、暂存区和版本库"><a href="#工作区、暂存区和版本库" class="headerlink" title="工作区、暂存区和版本库"></a>工作区、暂存区和版本库</h1><h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区：能看到的目录，如例子中的learngit</p>
-<p>暂存区：版本库中的stage(或者叫index)</p>
-<h2 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h2><p><strong>工作区</strong>有个隐藏目录.git是Git的版本库。版本库repository即仓库(目录),库里所有文件都被git管理起来，每个文件的更新都能跟踪，以便在将来某个时刻可以还原。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建工作区</span>
-<span class="token function">mkdir</span> learngit
-<span class="token builtin class-name">cd</span> learngit
-<span class="token builtin class-name">pwd</span>
-<span class="token comment"># Git管理该仓库</span>
-<span class="token function">git</span> init <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103015235.png" alt="image-20230421103015235"></p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103005144.png" alt="image-20230421103005144"></p>
-<h2 id="把文件添加到版本库"><a href="#把文件添加到版本库" class="headerlink" title="把文件添加到版本库"></a>把文件添加到版本库</h2><p>创建readme.txt文件</p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103617658.png" alt="image-20230421103617658"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将文件添加到仓库</span>
-<span class="token function">git</span> <span class="token function">add</span> readme.txt
-<span class="token comment"># 将文件提交到仓库,-m &lt;提交说明></span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"wrote a readme file"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104350344.png" alt="image-20230421104350344"></p>
-<h2 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h2><p>需要提交的文件修改全部放到暂存区，然后一次性提交暂存区的所有修改。</p>
-<p>往版本库添加时分两步：</p>
-<ul>
-<li>git add 把文件修改添加到暂存区</li>
-<li>git commit 把暂存区的所有内容提交到当前分支</li>
-</ul>
-<p>创建版本库时git自动创建唯一master分支。</p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421114654775.png" alt="image-20230421114654775"></p>
-<p>修改readme.txt文件</p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104605464.png" alt="image-20230421104605464"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看修改结果</span>
-<span class="token function">git</span> status
-<span class="token comment"># 查看上次是如何修改的，修改内容</span>
-<span class="token function">git</span> <span class="token function">diff</span> readme.txt
-<span class="token comment"># 添加修改</span>
-<span class="token function">git</span> <span class="token function">add</span> readme.txt
-<span class="token comment"># 查看添加状态</span>
-<span class="token function">git</span> status
-<span class="token comment"># 提交修改</span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add 666"</span>
-<span class="token comment"># 查看提交状态</span>
-<span class="token function">git</span> status<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421105618941.png" alt="image-20230421105618941"></p>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
-<li>git会把每次提交串成一条历史时间线。</li>
-<li>HEAD表示当前版本，HEAD^表示上个版本，HEAD~100表示往上100个版本</li>
-</ul>
-<p>Git内部有个指向当前版本的HEAD指针，回退版本时，仅把HEAD指针改变。</p>
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421111547768.png" alt="image-20230421111547768"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看提交的历史记录,以便确定要回退到哪个版本。</span>
-<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421110635353.png" alt="image-20230421110635353"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 回退到上个版本</span>
-<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> HEAD^
-<span class="token comment"># 查看版本库状态</span>
-<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当你用<code>$ git reset --hard HEAD^</code>回退到<code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的commit id。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看命令历史记录，以便确定要回到未来的哪个版本。</span>
-<span class="token function">git</span> reflog
-<span class="token comment"># 回退到未来指定版本</span>
-<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> 5cef<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421112342557.png" alt="image-20230421112342557"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>chips入职考试</title>
+    <url>/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
+<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
+<ul>
+<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
+<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
+<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
+<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
+<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
+</ul>
+<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>]]></content>
   </entry>
   <entry>
     <title>wifi破解</title>
@@ -1929,19 +1951,5 @@ aircrack-ng <span class="token parameter variable">-a2</span> <span class="token
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>chips入职考试</title>
-    <url>/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/</url>
-    <content><![CDATA[<h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
-<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
-<ul>
-<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
-<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
-<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
-<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
-<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
-</ul>
-<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>]]></content>
   </entry>
 </search>
