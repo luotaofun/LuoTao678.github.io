@@ -2106,7 +2106,7 @@ aircrack-ng <span class="token parameter variable">-a2</span> <span class="token
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>物流进销存管理系统设计</title>
     <url>/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E8%BF%90%E8%90%A5%E6%A8%A1%E5%BC%8F.png" alt="运营模式"></p>
 <h1 id="一-业务功能"><a href="#一-业务功能" class="headerlink" title="一 业务功能"></a>一 业务功能</h1><h2 id="1-入库管理"><a href="#1-入库管理" class="headerlink" title="1 入库管理"></a>1 入库管理</h2><h3 id="1-1-入库管理-入库单录入查询"><a href="#1-1-入库管理-入库单录入查询" class="headerlink" title="1.1 入库管理- 入库单录入查询"></a>1.1 入库管理- 入库单录入查询</h3><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230626145754954.png" alt="image-20230626145754954"></p>
@@ -2182,5 +2182,8 @@ aircrack-ng <span class="token parameter variable">-a2</span> <span class="token
 <h2 id="条码管理"><a href="#条码管理" class="headerlink" title="条码管理"></a>条码管理</h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230629152007788.png" alt="image-20230629152007788"></p>
 <p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86.png" alt="条码管理"></p>
 ]]></content>
+      <tags>
+        <tag>chips</tag>
+      </tags>
   </entry>
 </search>
