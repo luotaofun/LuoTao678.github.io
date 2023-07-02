@@ -2179,11 +2179,60 @@ aircrack-ng <span class="token parameter variable">-a2</span> <span class="token
 <h2 id="其他出入库"><a href="#其他出入库" class="headerlink" title="其他出入库"></a>其他出入库</h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E5%85%B6%E4%BB%96%E5%87%BA%E5%85%A5%E5%BA%93.png" alt="其他出入库"></p>
 <h2 id="退-还货管理"><a href="#退-还货管理" class="headerlink" title="退/还货管理"></a><strong>退/还货管理</strong></h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E9%80%80_%E8%BF%98%E8%B4%A7%E7%AE%A1%E7%90%86.png" alt="退_还货管理"></p>
 <h2 id="CT分销库存产品统计"><a href="#CT分销库存产品统计" class="headerlink" title="CT分销库存产品统计"></a><strong>CT分销库存产品统计</strong></h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/CT%E5%88%86%E9%94%80%E5%BA%93%E5%AD%98%E4%BA%A7%E5%93%81%E7%BB%9F%E8%AE%A1.png" alt="CT分销库存产品统计"></p>
-<h2 id="条码管理"><a href="#条码管理" class="headerlink" title="条码管理"></a>条码管理</h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230629152007788.png" alt="image-20230629152007788"></p>
-<p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86.png" alt="条码管理"></p>
+<h2 id="条码管理"><a href="#条码管理" class="headerlink" title="条码管理"></a>条码管理</h2><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86.png" alt="条码管理"></p>
 ]]></content>
       <tags>
         <tag>chips</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2023年7月2日10:44:13</title>
+    <url>/2023/07/02/2023%E5%B9%B47%E6%9C%882%E6%97%A510-44-13/</url>
+    <content><![CDATA[<h2 id="资料获取"><a href="#资料获取" class="headerlink" title="资料获取"></a>资料获取</h2><p>背景知识、业务流程、数据结构、金蝶云入库接口对接、CBS类型</p>
+<p>订单通知规则、采购订单号规则、《CBS类型设计文档》</p>
+<h2 id="字段"><a href="#字段" class="headerlink" title="字段"></a>字段</h2><p>采购合同号的规则（厂家）。</p>
+<p>不同订单类型。</p>
+<h2 id="出库"><a href="#出库" class="headerlink" title="出库"></a>出库</h2><p><strong>CBS类型</strong></p>
+<ul>
+<li>一般出货(总部仓库出去)</li>
+<li>厂商直发(厂家直接提货出去)</li>
+</ul>
+<p><strong>逻辑调拨（逻辑仓位调整）</strong></p>
+<p>例：从海宁仓库分销正常仓——&gt;总部仓库分销虚库仓</p>
+<p>数据还在逻辑仓里，货已经出去了。后续业绩申报时，针对总部仓库分销虚库进行申报</p>
+<p><img src="/2023/07/02/2023%E5%B9%B47%E6%9C%882%E6%97%A510-44-13/image-20230702114707987.png" alt="image-20230702114707987"></p>
+<ul>
+<li><p><strong>当周分销转虚库</strong>（销售出去了还没报业绩，先转虚库。）</p>
+</li>
+<li><p><strong>虚库转分销上报</strong>（当周出货当周向厂家报业绩）。</p>
+</li>
+<li><p>CBS代码（）</p>
+</li>
+</ul>
+<p><strong>产品线</strong></p>
+<p>每个产品线至少对应一个厂家 </p>
+<p><strong>单据类型</strong></p>
+<ul>
+<li>出库</li>
+<li>退货</li>
+<li>借货</li>
+<li>还货</li>
+</ul>
+<p><strong>库存类型</strong></p>
+<ul>
+<li>项目库</li>
+<li>分销库</li>
+</ul>
+<p><strong>仓库属性</strong></p>
+<ul>
+<li>厂商直发仓（过一下系统，逻辑仓）</li>
+<li>借转销仓（借货转销售，借出去后对方购入，做虚还，入逻辑仓 ）</li>
+<li>总代样机仓（样机产品借给客户，用不好(拆封过)还货到<strong>总代样机旧件仓</strong>，用得好借转销）</li>
+<li>客户从总代样机仓第一次借出去（入总代样机借货仓）,还货（还到旧件仓），从旧件仓第二次借货（入旧件借货仓）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>record</tag>
       </tags>
   </entry>
 </search>
