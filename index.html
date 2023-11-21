@@ -229,6 +229,520 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Luotao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taoの博客">
+      <meta itemprop="description" content="<font color="#FFFFFF">每一个辉煌瞬间的背后都是无数个平凡枯燥的片断支撑起来的。</font>">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Taoの博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/" class="post-title-link" itemprop="url">Mysql数据库基础_袁庭新</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-08-21 19:17:34" itemprop="dateCreated datePublished" datetime="2023-08-21T19:17:34+08:00">2023-08-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-11-21 19:43:45" itemprop="dateModified" datetime="2023-11-21T19:43:45+08:00">2023-11-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><ul>
+<li>Sun公司1996</li>
+<li>关系型: 字段对应属性值mysql、oracle</li>
+<li>非关系型: nosql</li>
+<li>数据库管理系统</li>
+</ul>
+<h2 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h2><ul>
+<li>Structured Query language_关系型数据库操作语言</li>
+<li>DML_manipulation表数据操作_增删改</li>
+<li>DQL_query表数据查询_查</li>
+<li>DCL——controller定义库的访问权限及安全级别</li>
+</ul>
+<h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><blockquote>
+<p>DDL_definition定义数据库、表、字段</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- dba不存在则创建dba，并指定编码方式utf8
+create database if not exists dba character set utf8;
+
+-- 查看dba的详细信息
+show  create database dba;
+
+-- 选中dba
+use dba;
+
+-- 查询选中的数据库
+select database();
+
+&#x2F;*
+	表名：商品表_category
+	分类：id	int
+	名称20个字节：cname	char(20)
+*&#x2F;
+use dba;
+create table category (
+		id int,
+		cname char(20)
+);
+
+-- LIKE克隆表
+ create table test2 like test1;
+ 
+ --查看表结构
+ desc category
+ 
+ -- 查看表sql定义语句
+ show create table category
+ 
+ --删表
+ use dba;
+ drop table if exists test1
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112173940133.png" alt="mysql数据类型"></li>
+</ul>
+<blockquote>
+<p> char与varchar区别:</p>
+<ul>
+<li>char存储固定长度的字符串效率高，性别、身份证号、手机号</li>
+<li>varchar适合在一定长度范围内变化的字符串，效率低（扩容或缩容）但节省存储空间，微博正文0-255</li>
+</ul>
+</blockquote>
+<h1 id="笛卡尔积"><a href="#笛卡尔积" class="headerlink" title="笛卡尔积"></a>笛卡尔积</h1><blockquote>
+<p>交叉连接（cross join），将左表每一行与右表每一行分别连接形成新记录。假设集合A={a,b}，集合B={0,1,2},则两个集合的笛卡尔积为{(a,0),(a,1),(a,2),(b,0),(b,1),(b,2)}。将两张表设置关系即可消除笛卡尔积的问题。</p>
+</blockquote>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113012203054.png" alt="image-20231113012203054"></p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113012616915.png" alt="image-20231113012616915"></p>
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database db4 character set utf8;‘
+
+use db4;
+-- 分类表:主表
+create table category(
+		cid varchar(32) primary key,
+		cname varchar(50)
+);
+-- 从表
+create table products(
+		pid varchar(32) primary key,
+		pname varchar(50),
+		price int,
+		flag varchar(2), -- 商品状态：1商品上架，2下架
+		category_id varchar(32),
+		-- 添加外键
+		foreign key (category_id) references category (cid)
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">use db4;
+
+select count(*) from category; --4
+select count(*) from products; --9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112222433527.png" alt="category"></p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112222352850.png" alt="products"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> category<span class="token punctuation">,</span>products<span class="token punctuation">;</span> <span class="token comment">-- 4 * 9=36</span>
+c001	家电	p001	小米	<span class="token number">5000</span>	<span class="token number">1</span>	c001
+c002	鞋服	p001	小米	<span class="token number">5000</span>	<span class="token number">1</span>	c001
+c003	化妆品	p001	小米	<span class="token number">5000</span>	<span class="token number">1</span>	c001
+c004	汽车	p001	小米	<span class="token number">5000</span>	<span class="token number">1</span>	c001
+c001	家电	p002	 格力空调	<span class="token number">3000</span>	<span class="token number">1</span>	c001
+c002	鞋服	p002	 格力空调	<span class="token number">3000</span>	<span class="token number">1</span>	c001
+c003	化妆品	p002	 格力空调	<span class="token number">3000</span>	<span class="token number">1</span>	c001
+c004	汽车	p002	 格力空调	<span class="token number">3000</span>	<span class="token number">1</span>	c001
+c001	家电	p003	 美的冰箱	<span class="token number">4500</span>	<span class="token number">1</span>	c001
+c002	鞋服	p003	 美的冰箱	<span class="token number">4500</span>	<span class="token number">1</span>	c001
+c003	化妆品	p003	 美的冰箱	<span class="token number">4500</span>	<span class="token number">1</span>	c001
+c004	汽车	p003	 美的冰箱	<span class="token number">4500</span>	<span class="token number">1</span>	c001
+c001	家电	p004	 篮球鞋	<span class="token number">800</span>	<span class="token number">1</span>	c002
+c002	鞋服	p004	 篮球鞋	<span class="token number">800</span>	<span class="token number">1</span>	c002
+c003	化妆品	p004	 篮球鞋	<span class="token number">800</span>	<span class="token number">1</span>	c002
+c004	汽车	p004	 篮球鞋	<span class="token number">800</span>	<span class="token number">1</span>	c002
+c001	家电	p005	 运动裤	<span class="token number">200</span>	<span class="token number">1</span>	c002
+c002	鞋服	p005	 运动裤	<span class="token number">200</span>	<span class="token number">1</span>	c002
+c003	化妆品	p005	 运动裤	<span class="token number">200</span>	<span class="token number">1</span>	c002
+c004	汽车	p005	 运动裤	<span class="token number">200</span>	<span class="token number">1</span>	c002
+c001	家电	p006	 T恤	<span class="token number">300</span>	<span class="token number">1</span>	c002
+c002	鞋服	p006	 T恤	<span class="token number">300</span>	<span class="token number">1</span>	c002
+c003	化妆品	p006	 T恤	<span class="token number">300</span>	<span class="token number">1</span>	c002
+c004	汽车	p006	 T恤	<span class="token number">300</span>	<span class="token number">1</span>	c002
+c001	家电	p007	 冲锋衣	<span class="token number">2000</span>	<span class="token number">1</span>	c002
+c002	鞋服	p007	 冲锋衣	<span class="token number">2000</span>	<span class="token number">1</span>	c002
+c003	化妆品	p007	 冲锋衣	<span class="token number">2000</span>	<span class="token number">1</span>	c002
+c004	汽车	p007	 冲锋衣	<span class="token number">2000</span>	<span class="token number">1</span>	c002
+c001	家电	p008	 神仙水	<span class="token number">800</span>	<span class="token number">1</span>	c003
+c002	鞋服	p008	 神仙水	<span class="token number">800</span>	<span class="token number">1</span>	c003
+c003	化妆品	p008	 神仙水	<span class="token number">800</span>	<span class="token number">1</span>	c003
+c004	汽车	p008	 神仙水	<span class="token number">800</span>	<span class="token number">1</span>	c003
+c001	家电	p009	 大宝	<span class="token number">200</span>	<span class="token number">1</span>	c003
+c002	鞋服	p009	 大宝	<span class="token number">200</span>	<span class="token number">1</span>	c003
+c003	化妆品	p009	 大宝	<span class="token number">200</span>	<span class="token number">1</span>	c003
+c004	汽车	p009	 大宝	<span class="token number">200</span>	<span class="token number">1</span>	c003<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h2><blockquote>
+<p>使用比较运算符进行表的某列数据的比较操作，并将满足比较运算符的结果（即匹配上的数据）重新组合。</p>
+</blockquote>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113012807874.png" alt="image-20231113012807874"></p>
+<ul>
+<li><p>隐式_where将比较运算符声明，作为多表连接条件。where字句会影响查询性能。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> 字段列表 <span class="token keyword">from</span> 表<span class="token number">1</span><span class="token punctuation">,</span>表<span class="token number">2</span> <span class="token keyword">where</span> 关联条件<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 查询所有的商品信息和对应的分类信息</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> products<span class="token punctuation">,</span>category <span class="token keyword">where</span> category_id <span class="token operator">=</span> cid<span class="token punctuation">;</span>
+p001	小米	<span class="token number">5000</span>	<span class="token number">1</span>	c001	c001	家电
+p002	 格力空调	<span class="token number">3000</span>	<span class="token number">1</span>	c001	c001	家电
+p003	 美的冰箱	<span class="token number">4500</span>	<span class="token number">1</span>	c001	c001	家电
+p004	 篮球鞋	<span class="token number">800</span>	<span class="token number">1</span>	c002	c002	鞋服
+p005	 运动裤	<span class="token number">200</span>	<span class="token number">1</span>	c002	c002	鞋服
+p006	 T恤	<span class="token number">300</span>	<span class="token number">1</span>	c002	c002	鞋服
+p007	 冲锋衣	<span class="token number">2000</span>	<span class="token number">1</span>	c002	c002	鞋服
+p008	 神仙水	<span class="token number">800</span>	<span class="token number">1</span>	c003	c003	化妆品
+p009	 大宝	<span class="token number">200</span>	<span class="token number">1</span>	c003	c003	化妆品<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>显示内连接。on语句遵循ANSI SQL标准，不会忽略连接条件。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 鞋服分类下，价格>500的商品名称和商品价格</span>
+<span class="token keyword">select</span> c<span class="token punctuation">.</span>cname<span class="token punctuation">,</span>p<span class="token punctuation">.</span>price <span class="token keyword">from</span> products p <span class="token keyword">join</span> category c <span class="token keyword">on</span> c<span class="token punctuation">.</span>cid <span class="token operator">=</span> p<span class="token punctuation">.</span>category_id <span class="token keyword">where</span> c<span class="token punctuation">.</span>cname<span class="token operator">=</span><span class="token string">'鞋服'</span> <span class="token operator">and</span> p<span class="token punctuation">.</span>price<span class="token operator">></span><span class="token number">500</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112215808566.png" alt="image-20231112215808566"></p>
+</li>
+</ul>
+<h2 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h2><p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113013403914.png" alt="image-20231113013403914"></p>
+<ul>
+<li><p>left join将左表作为基表查询所有左表数据以及右表的交集，若右表没有与之匹配的数据则右表NULL显示。</p>
+<pre class="line-numbers language-none"><code class="language-none">-- 每个分类下商品详情
+select 
+		* 
+from 
+		category c 
+left join 
+		products p 
+on	
+		p.category_id&#x3D;c.cid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112222139131.png" alt="image-20231112222139131"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 每个分类下商品个数</span>
+<span class="token keyword">select</span>
+	cname <span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>pname<span class="token punctuation">)</span> 
+<span class="token keyword">from</span> 
+		category c 
+<span class="token keyword">left</span> <span class="token keyword">join</span> 
+		products p 
+<span class="token keyword">on</span>	
+		p<span class="token punctuation">.</span>category_id<span class="token operator">=</span>c<span class="token punctuation">.</span>cid
+<span class="token keyword">group</span> <span class="token keyword">by</span>
+		c<span class="token punctuation">.</span>cname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112225538011.png" alt="image-20231112225538011"></p>
+</li>
+<li><p>right join</p>
+<p>以右表为基表，查询所有右表数据以及左表交集，若左表没匹配上则null显示。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 每件商品的分类信息</span>
+<span class="token keyword">select</span>
+<span class="token operator">*</span> 
+<span class="token keyword">from</span>
+	products p
+<span class="token keyword">right</span> <span class="token keyword">join</span>
+	category c
+<span class="token keyword">on</span> 
+	c<span class="token punctuation">.</span>cid<span class="token operator">=</span>p<span class="token punctuation">.</span>category_id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112230325007.png" alt="image-20231112230325007"></p>
+</li>
+<li><p>联合查询 union</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113014823540.png" alt="image-20231113014823540"></p>
+</li>
+</ul>
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><blockquote>
+<p>将一个查询语句作为另一个查询的条件。子查询的结果作为输入内容给父查询</p>
+<p>select—from-where作为一个查询块。将一个查询块作为另一个查询块where或者作为having、from部分出现，该查询块为子查询（内层查询），外层的查询块为父查询（外部查询）。</p>
+</blockquote>
+<ul>
+<li><p>where型：将内层查询结果作为外层查询的比较条件（where）</p>
+<pre class="line-numbers language-none"><code class="language-none">-- 价格最高的商品信息
+select
+		*
+from 
+		products 
+where 
+		price&#x3D;(select max(price) from products);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112233736779.png" alt="image-20231112233736779"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 化妆品分类下商品名称和价格</span>
+<span class="token keyword">select</span> pname<span class="token punctuation">,</span>price <span class="token keyword">from</span> products p <span class="token keyword">where</span> p<span class="token punctuation">.</span>category_id<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> cid <span class="token keyword">from</span> category <span class="token keyword">where</span> cname<span class="token operator">=</span><span class="token string">'化妆品'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112234253780.png" alt="image-20231112234253780"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 小于平均价格的商品</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> products <span class="token keyword">where</span> price <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>price<span class="token punctuation">)</span> <span class="token keyword">from</span> products<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112234543998.png" alt="image-20231112234543998"></p>
+</li>
+<li><p>from型：将内层查询结果在from后起别名作为临时表使用</p>
+</li>
+<li><p>exist型：把外层查询结果拿到内层结果去比较</p>
+</li>
+<li><p>标量子查询：一行一列</p>
+</li>
+<li><p>列子查询：一列多行</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 价格&lt;2000的商品来自那个分类</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>  <span class="token keyword">from</span> category <span class="token keyword">where</span> cid <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token keyword">distinct</span> category_id <span class="token keyword">from</span> products <span class="token keyword">where</span> price <span class="token operator">&lt;</span> <span class="token number">2000</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231112235405944.png" alt="image-20231112235405944"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 家电和鞋服分类下所有商品信息</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> products <span class="token keyword">where</span> category_id <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> cid <span class="token keyword">from</span> category  <span class="token keyword">where</span> cname <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token string">'家电'</span><span class="token punctuation">,</span><span class="token string">'鞋服'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113000518723.png" alt="image-20231113000518723"></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 价格>500元的商品名称、价格、分类</span>
+<span class="token keyword">select</span> p<span class="token punctuation">.</span>pname<span class="token punctuation">,</span>p<span class="token punctuation">.</span>price<span class="token punctuation">,</span>c<span class="token punctuation">.</span>cname <span class="token keyword">from</span> products p <span class="token keyword">left</span> <span class="token keyword">join</span> category c <span class="token keyword">on</span> p<span class="token punctuation">.</span>category_id<span class="token operator">=</span>c<span class="token punctuation">.</span>cid <span class="token keyword">where</span> p<span class="token punctuation">.</span>price<span class="token operator">></span><span class="token number">500</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113001017333.png" alt="image-20231113001017333"></p>
+</li>
+<li><p>行子查询：一行多列</p>
+</li>
+<li><p>表子查询：二维表</p>
+</li>
+</ul>
+<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><ul>
+<li><p>第一范式</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113001714895.png" alt="image-20231113001714895"></p>
+</li>
+<li><p>第二范式</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113001914551.png" alt="image-20231113001914551"></p>
+</li>
+<li><p>第三范式</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113002109752.png" alt="image-20231113002109752"></p>
+</li>
+<li><p>反三范式</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113002558960.png" alt="image-20231113002558960"></p>
+</li>
+</ul>
+<h2 id="mysql索引"><a href="#mysql索引" class="headerlink" title="mysql索引"></a>mysql索引</h2><blockquote>
+<p>数据库设计时，对字段建立引用，从而提升查询字段数据的效率。</p>
+</blockquote>
+<ul>
+<li><p>目录结构</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> mysql
+<span class="token builtin class-name">cd</span> /opt/homebrew/var/mysql
+<span class="token function">ls</span> <span class="token parameter variable">-l</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231121185336465.png" alt="image-20231121185336465">索引分类</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231121185911693.png" alt="image-20231121185911693"></p>
+<ul>
+<li><p>普通索引。配合条件查询、排序使用</p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231121190348135.png" alt="image-20231121190348135"></p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">use multi_table_query;
+
+-- 创建表时建索引
+create table index_tab(
+	did int,
+	name VARCHAR(20),
+	hobby VARCHAR(30),
+	address VARCHAR(30),
+	index index_name(name)
+);
+
+-- 字段建索引index_hobby
+create index index_hobby on index_tab(hobby);
+
+-- alter建索引
+alter table index_tab add index index_address(address);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231121191438222.png" alt="image-20231121191438222"></p>
+</li>
+<li><p>唯一索引。索引的列只能出现一次。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 和建普通索引一样，只不过都在index前加了unique
+create table uni_index_tab(
+	did int,
+	name VARCHAR(20),
+	hobby VARCHAR(30),
+	address VARCHAR(30),
+	unique index index_name(name)
+);
+create unique index index_hobby on uni_index_tab(hobby);
+alter table uni_index_tab add unique index index_address(address);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231121193104137.png" alt="image-20231121193104137"></p>
+</li>
+<li><p>主键索引。主键是唯一性索引，用于标识数据表中某条记录.not null</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 添加主键索引
+alter table 表名 add primary key(字段名);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>```mysql<br>– 删除普通索引/唯一索引<br>alter table 表名 drop index 索引名;<br>alter table uni_index_tab drop index index_name;<br>– 删除主键索引(前提条件是非自增主键auto_increment)<br>alter table 表名 drop primary key;<br>– 取消主键自增<br>alter table 表名 modify 主键字段 字段类型;</p>
+<pre class="line-numbers language-none"><code class="language-none">
+# 多表查询
+
+## 多表关系
+
+* 一对一
+
+  ![image-20231113011730264](.&#x2F;Mysql数据库基础-袁庭新&#x2F;image-20231113011730264.png)
+
+* 一对多![image-20231113003747711](.&#x2F;Mysql数据库基础-袁庭新&#x2F;image-20231113003747711.png)
+
+* 多对多
+
+  ![image-20231113003905377](.&#x2F;Mysql数据库基础-袁庭新&#x2F;image-20231113003905377.png)
+
+&#96;&#96;&#96;sql
+CREATE database if not exists multi_table_query;
+use multi_table_query;
+CREATE table student(
+		id int auto_increment primary key comment &#39;主键ID&#39;,
+		name varchar(10) comment &#39;姓名&#39;,
+		no varchar(10) comment &#39;学号&#39;
+)comment &#39;学生表&#39;;
+
+insert into student values (null,&#39;戴医生&#39;,&#39;001&#39;),(null,&#39;谢逊&#39;,&#39;002&#39;),(null,&#39;殷天正&#39;,&#39;003&#39;),(null,&#39;韦一笑&#39;,&#39;004&#39;)
+
+
+
+CREATE table course(
+		id int auto_increment PRIMARY key comment &#39;主键ID&#39;,
+		name varchar(10) comment &#39;课程名称&#39;
+) comment &#39;课程表&#39;;
+
+insert into course values (null,&#39;java&#39;),(null,&#39;php&#39;),(null,&#39;mysql&#39;),(null,&#39;hadoop&#39;)
+
+
+create table student_course(
+		id int auto_increment comment &#39;主键&#39; primary key,
+		studentid int not null comment &#39;学生ID&#39;,
+		courseid int not null comment &#39;课程ID&#39;,
+		constraint fk_courseid foreign key (courseid) REFERENCES course (id),
+		constraint fk_studentid foreign key (studentid) REFERENCES student (id)
+) comment &#39;学生课程中间表&#39;;
+insert into student_course values(null,1,1),(null,1,2),(null,1,3),(null,2,2),(null,2,3),(null,3,4)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113011228840.png" alt="image-20231113011228840"></p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113011246360.png" alt="image-20231113011246360"></p>
+<p><img src="/2023/08/21/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80-%E8%A2%81%E5%BA%AD%E6%96%B0/image-20231113011340961.png" alt="image-20231113011340961"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/15/2023%E5%B9%B48%E6%9C%8815%E6%97%A512-50-19/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Luotao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taoの博客">
+      <meta itemprop="description" content="<font color="#FFFFFF">每一个辉煌瞬间的背后都是无数个平凡枯燥的片断支撑起来的。</font>">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Taoの博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/08/15/2023%E5%B9%B48%E6%9C%8815%E6%97%A512-50-19/" class="post-title-link" itemprop="url">2023年8月15日12:50:19</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-08-15 12:50:24 / 修改时间：12:51:28" itemprop="dateCreated datePublished" datetime="2023-08-15T12:50:24+08:00">2023-08-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>人往高处走，水往低处流，前面是人的心理规律，后面是物理规律。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/03/2023%E5%B9%B47%E6%9C%883%E6%97%A514-16-59/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -445,7 +959,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-06 18:26:20" itemprop="dateModified" datetime="2023-07-06T18:26:20+08:00">2023-07-06</time>
+      <time title="修改时间：2023-07-07 11:59:21" itemprop="dateModified" datetime="2023-07-07T11:59:21+08:00">2023-07-07</time>
     </span>
 
   
@@ -508,8 +1022,7 @@
 <li>入库条码明细的BOM编码和产品型号等信息自动匹配</li>
 </ul>
 <p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706143020268.png" alt="image-20230706143020268"></p>
-<p><strong>1 关联采购订单号入库</strong></p>
-<p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706145741631.png" alt="image-20230706145741631"></p>
+<h6 id="关联采购订单号入库"><a href="#关联采购订单号入库" class="headerlink" title="关联采购订单号入库"></a>关联采购订单号入库</h6><p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706145741631.png" alt="image-20230706145741631"></p>
 <ul>
 <li>勾选入库。系统自动通过采购订单号获取有关信息填充到主表和明细表。</li>
 <li>主表录入<strong>仓库地点、产品线（含库存类型、仓库属性）</strong></li>
@@ -520,7 +1033,7 @@
 <p>同一个合同号分批入库，下次入库时，系统提供剩余未入库清单再次勾选入库。</p>
 <p>对非H3C产品线，如果有无条码需要按有条码管理，系统可以提供<strong>虚拟条码</strong>生成功能。</p>
 </blockquote>
-<h4 id="1-1-3-业务说明"><a href="#1-1-3-业务说明" class="headerlink" title="1.1.3 业务说明"></a>1.1.3 业务说明</h4><h2 id="2-出库管理"><a href="#2-出库管理" class="headerlink" title="2 出库管理"></a>2 出库管理</h2><h3 id="2-1-出库管理-出库单录入查询"><a href="#2-1-出库管理-出库单录入查询" class="headerlink" title="2.1 出库管理- 出库单录入查询"></a>2.1 出库管理- 出库单录入查询</h3><h4 id="2-1-1-字段说明"><a href="#2-1-1-字段说明" class="headerlink" title="2.1.1 字段说明"></a>2.1.1 字段说明</h4><h5 id="出库主表字段说明"><a href="#出库主表字段说明" class="headerlink" title="出库主表字段说明"></a><em>出库主表字段说明</em></h5><hr>
+<h6 id="批量导入"><a href="#批量导入" class="headerlink" title="批量导入"></a>批量导入</h6><h4 id="1-1-3-业务说明"><a href="#1-1-3-业务说明" class="headerlink" title="1.1.3 业务说明"></a>1.1.3 业务说明</h4><h2 id="2-出库管理"><a href="#2-出库管理" class="headerlink" title="2 出库管理"></a>2 出库管理</h2><h3 id="2-1-出库管理-出库单录入查询"><a href="#2-1-出库管理-出库单录入查询" class="headerlink" title="2.1 出库管理- 出库单录入查询"></a>2.1 出库管理- 出库单录入查询</h3><h4 id="2-1-1-字段说明"><a href="#2-1-1-字段说明" class="headerlink" title="2.1.1 字段说明"></a>2.1.1 字段说明</h4><h5 id="出库主表字段说明"><a href="#出库主表字段说明" class="headerlink" title="出库主表字段说明"></a><em>出库主表字段说明</em></h5><hr>
 <p><strong>主库日期</strong></p>
 <p><strong>出库单号</strong></p>
 <p><strong>销售合同号</strong></p>
@@ -610,7 +1123,7 @@
 <p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706174032848.png" alt="image-20230706174032848"></p>
 <h2 id="4-库存查询"><a href="#4-库存查询" class="headerlink" title="4 库存查询"></a>4 库存查询</h2><p><strong>仓库属性分类</strong></p>
 <p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706163924947.png" alt="image-20230706163924947"></p>
-<h3 id="4-1-产品库存查询"><a href="#4-1-产品库存查询" class="headerlink" title="4.1 产品库存查询"></a>4.1 产品库存查询</h3><h3 id="4-2-条码库存查询"><a href="#4-2-条码库存查询" class="headerlink" title="4.2 条码库存查询"></a>4.2 条码库存查询</h3><h3 id="4-3-产品实际库存与计算库存校验"><a href="#4-3-产品实际库存与计算库存校验" class="headerlink" title="4.3 产品实际库存与计算库存校验"></a>4.3 产品实际库存与计算库存校验</h3><h3 id="4-4-条码实际库存与计算库存校验"><a href="#4-4-条码实际库存与计算库存校验" class="headerlink" title="4.4 条码实际库存与计算库存校验"></a>4.4 条码实际库存与计算库存校验</h3><h3 id="4-5-产品与条码库存一致性校验"><a href="#4-5-产品与条码库存一致性校验" class="headerlink" title="4.5 产品与条码库存一致性校验"></a>4.5 产品与条码库存一致性校验</h3><h3 id="4-6-条码库龄分析"><a href="#4-6-条码库龄分析" class="headerlink" title="4.6 条码库龄分析"></a>4.6 条码库龄分析</h3><p>对库存盘点后的条码库龄分段。对退还条码自动搜索出对应的供应商发货时间。</p>
+<h3 id="4-1-产品库存查询"><a href="#4-1-产品库存查询" class="headerlink" title="4.1 产品库存查询"></a>4.1 产品库存查询</h3><h3 id="4-2-条码库存查询"><a href="#4-2-条码库存查询" class="headerlink" title="4.2 条码库存查询"></a>4.2 条码库存查询</h3><h3 id="4-3-产品实际库存与计算库存校验"><a href="#4-3-产品实际库存与计算库存校验" class="headerlink" title="4.3 产品实际库存与计算库存校验"></a>4.3 产品实际库存与计算库存校验</h3><h4 id="4-3-1-与金蝶系统库存对比"><a href="#4-3-1-与金蝶系统库存对比" class="headerlink" title="4.3.1 与金蝶系统库存对比"></a>4.3.1 与金蝶系统库存对比</h4><h3 id="4-4-条码实际库存与计算库存校验"><a href="#4-4-条码实际库存与计算库存校验" class="headerlink" title="4.4 条码实际库存与计算库存校验"></a>4.4 条码实际库存与计算库存校验</h3><h3 id="4-5-产品与条码库存一致性校验"><a href="#4-5-产品与条码库存一致性校验" class="headerlink" title="4.5 产品与条码库存一致性校验"></a>4.5 产品与条码库存一致性校验</h3><h3 id="4-6-条码库龄分析"><a href="#4-6-条码库龄分析" class="headerlink" title="4.6 条码库龄分析"></a>4.6 条码库龄分析</h3><p>对库存盘点后的条码库龄分段。对退还条码自动搜索出对应的供应商发货时间。</p>
 <hr>
 <p>库龄：</p>
 <p><img src="/2023/06/30/%E7%89%A9%E6%B5%81%E8%BF%9B%E9%94%80%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-20230706165535402.png" alt="image-20230706165535402"></p>
@@ -987,136 +1500,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/18/chips%E8%BD%AC%E6%AD%A3%E8%80%83%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Luotao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taoの博客">
-      <meta itemprop="description" content="<font color="#FFFFFF">每一个辉煌瞬间的背后都是无数个平凡枯燥的片断支撑起来的。</font>">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Taoの博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/06/18/chips%E8%BD%AC%E6%AD%A3%E8%80%83%E8%AF%95/" class="post-title-link" itemprop="url">chips转正考试</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-06-18 16:23:02 / 修改时间：19:14:42" itemprop="dateCreated datePublished" datetime="2023-06-18T16:23:02+08:00">2023-06-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="企业文化"><a href="#企业文化" class="headerlink" title="企业文化"></a>企业文化</h2><ul>
-<li>成立1996，业务起步2002</li>
-<li>股东：金证科技股份600446、金证博泽科技</li>
-<li>经营范围：IT产品代理销售（云计算、无线、存储、监控等），维保服务和软件产品开发</li>
-<li>经营理念：立事于行，服务于心</li>
-<li>经营思路：以产品分销为基础，以技术服务为核心，贴近客户，耕耘市场，创造价值。在巩固现有产品销售的同时，将不断增加新的增值产品线，由纯销售型分销总代理向技术型分销总代理转型，增强公司的核心竞争力！</li>
-</ul>
-<h3 id="企业文化核心"><a href="#企业文化核心" class="headerlink" title="企业文化核心"></a>企业文化核心</h3><ul>
-<li>使命：提供满意的产品、服务和解决方案</li>
-<li>愿景：中国IT行业最强的增值分销商和专业的服务提供商。</li>
-</ul>
-<h3 id="核心价值观"><a href="#核心价值观" class="headerlink" title="核心价值观"></a>核心价值观</h3><ul>
-<li>坚持立事于行，服务于心的理念，融入客户，想客户之所想，急客户之所想，快速响应，立即行动；</li>
-<li>坚持博、信、和、道的价值观，做职业人，做专业事，与公司一起成就事业，成就未来；</li>
-<li>以组织目标为重，坚持主动的团队协作；</li>
-<li>一旦确定目标，就要坚定信念，做对做好；</li>
-<li>每个员工都应得到公正的评价、公平的竞争和发展机会，鼓励奉献精神，绝不让雷锋吃亏；</li>
-<li>不浪费一张纸，不浪费一度电，每一分钱都花在刀刃上；</li>
-<li>与客户、员工、股东、合作伙伴共同发展，共享成果。</li>
-</ul>
-<h3 id="搏信和到"><a href="#搏信和到" class="headerlink" title="搏信和到"></a>搏信和到</h3><ul>
-<li><blockquote>
-<ul>
-<li>搏 是一种意志，是一种永不放弃的精神，也是齐普生的成功心得。凭借着拼搏不殆，团结奋进的顽强作风，八次蝉联H3C “最佳总代理” 。</li>
-</ul>
-<p>​    齐普生公司从一个网络事业部发展到今天全国知名的分销商，就是靠这种销售人员不辞辛苦，用真诚和实力打动客户，靠商务人员，通宵达旦，以成倍的努力来赢得厂家和客户的认可，靠技术人员加班加点守候在工程现场，换来客户的赞许和首肯……</p>
-<p>​    未来，面临的是越来越严峻的市场环境和残酷的市场竞争，要生存、要发展、要守住市场、要扩大份额，我们唯有发扬艰苦奋斗、奋勇拼博的精神，稳扎稳打，才能再创佳绩，立于不败之地！天道酬勤，勤奋拼搏将成为我们决战市场的胜利之剑！</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>信是做人之本，是立业之根。齐普生一直以来倡导诚信的做人准则，诚信的市场环境，把诚信作为长期发展的基石。</p>
-<p>​    坚持塑造诚信的企业形象，把诚信作为最好的竞争手段；建立诚信体系成为齐普生未来工作的重中之中。</p>
-<p>​     对外，坚持信用、信誉、信守三个原则。信用，要做到言行一致；信誉，以信誉赢得商誉；信守，企业自觉遵守国家法律，依法经营，按合同办事。</p>
-<p>​    对内，坚持诚信如一，员工之间要坦诚相处，诚心诚意为企业做事情干实业，实现诚实守信的良好气氛。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>和 在国家倡导建立和谐的社会主义大背景下，齐普生公司一直致力于建立和谐的市场环境，和谐的友商关系、和谐的内部氛围。</p>
-<p>​    以和为贵，和气生财，齐普生与各级友商不是你死我活的敌我关系，而是一环扣一环，互相合作，共同进步的联盟体。与厂商、二代和谐共处，互为促进，共同发展，并建立长期的战略合作伙伴关系。</p>
-<p>​     齐普生坚持“以人为本”的管理宗旨，努力营造和谐人文的工作环境。齐普生人要始终保持平和的心态。与人为善，和气待人，全身心融入到这个和谐的大家庭里。积极配合，相互支持，积极创造和谐的工作氛围，实现更高层次的和谐！</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>道，人道，商道，构成了齐普生的发展之道，是得以大踏步前进的思想精髓和科学方法。</p>
-<p>​     齐普生为人之道，做事先做人，齐普生人深刻领悟“立事于行，服务于心”的经营理念。齐普生从商之道。公司在成立多年来艰苦的创业历程中，不断摸索总结，逐步形成了一套具有齐普生特色的经营理念的发展之道。</p>
-<p>​    提供售前、售中、售后的全方位服务，深入分析客户需求，力争为客户设计最为完美的解决方案。遍布全国30个办事处，配备销售和技术人员，响应迅速，建立完善的支持和服务体系，这就是渠道之道。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="工匠精神"><a href="#工匠精神" class="headerlink" title="工匠精神"></a>工匠精神</h3><p>齐普生的工匠精神有四个内涵：<strong>敬业、精益求精、专注</strong>、<strong>创新</strong></p>
-<h3 id="走出舒适区"><a href="#走出舒适区" class="headerlink" title="走出舒适区"></a>走出舒适区</h3><p>不满足现状（现有的成绩、生活环境或状态），我不能忍受与不求上进的人同归于尽。</p>
-<h3 id="工作量模型"><a href="#工作量模型" class="headerlink" title="工作量模型"></a>工作量模型</h3><h2 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h2><ul>
-<li>02-06生存与累计: 业务起步与02，是杭州华三最早的四家代理中唯一幸存。05年以SOHO产品为契机融入IT纯分销业务。</li>
-<li>07-11技术与提升：以IT行业增值分销商与专业服务提供商为战略目标，在分销业务和IT技术服务快速发展。</li>
-<li>12-17曲折与 专注：以SOHO视讯语音产品介入华为总代理体系，但因数通产品的冲突，剥离华为产品业务，聚焦于华三产品。</li>
-<li>18-未来 定位与发展：产品线更丰富、市场更广阔。</li>
-</ul>
-<h2 id="资质荣誉"><a href="#资质荣誉" class="headerlink" title="资质荣誉"></a>资质荣誉</h2><ul>
-<li>多次新华三优秀总代理、奇安信、迪普总代</li>
-<li>多年纳税百佳民营企业</li>
-</ul>
-<h2 id="ISO基本知识"><a href="#ISO基本知识" class="headerlink" title="ISO基本知识"></a>ISO基本知识</h2><h2 id="基本规章制度"><a href="#基本规章制度" class="headerlink" title="基本规章制度"></a>基本规章制度</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/13/2023-06-13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1192,84 +1575,6 @@
 </ul>
 </blockquote>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Luotao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taoの博客">
-      <meta itemprop="description" content="<font color="#FFFFFF">每一个辉煌瞬间的背后都是无数个平凡枯燥的片断支撑起来的。</font>">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Taoの博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/" class="post-title-link" itemprop="url">chips入职考试</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-05-04 09:28:17 / 修改时间：09:42:20" itemprop="dateCreated datePublished" datetime="2023-05-04T09:28:17+08:00">2023-05-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="做压力的管理者"><a href="#做压力的管理者" class="headerlink" title="做压力的管理者"></a>做压力的管理者</h1><p>认识压力：生理信号、情绪信号、精神信号、行为信号</p>
-<p><img src="/2023/05/04/chips%E5%85%A5%E8%81%8C%E8%80%83%E8%AF%95/image-20230504092912651.png" alt="image-20230504092912651"></p>
-<ul>
-<li>工作本质压力指因为工作单调无趣或负荷太大导致</li>
-<li>职业发展压力指因为工作对能力要求超过本身或觉得工作没有挑战性</li>
-<li>角色扮演压力指因为工作角色与其他生活角色冲突或不清楚工作角色</li>
-<li>人际关系压力指与上司、同事或部署间的人际关系紧张</li>
-<li>组织环境压力指因为某些管理制度不认同或组织文化与自己有落差或工作环境不良</li>
-</ul>
-<h2 id="office-PPT"><a href="#office-PPT" class="headerlink" title="office PPT"></a>office PPT</h2>
       
     </div>
 
